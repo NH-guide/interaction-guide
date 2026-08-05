@@ -2698,18 +2698,27 @@
       color: #fff;
     }
     .sidebar-home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      width: 100%;
+      min-height: 40px;
       margin: 17px 0 4px;
-      padding: 0;
-      border: 0;
-      background: transparent;
+      padding: 9px 12px;
+      border: 1px solid var(--purple-200);
+      border-radius: 12px;
+      background: #fff;
       color: var(--purple-700);
       font-family: inherit;
-      font-size: 11px;
-      font-weight: 800;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
       cursor: pointer;
+      transition: background .16s ease;
     }
+    .sidebar-home:hover { background: var(--purple-50); }
+    .nav-home-ico{display:block;width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
     @media (max-width: 860px) {
       .guide-layout { width: min(100% - 28px, 1120px); padding-top: 14px; }
@@ -4072,7 +4081,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="sidebar-kicker">나인하이어 커넥트</span>
           <h2 class="sidebar-title">커넥트 활용 흐름</h2>
           <p class="sidebar-desc">커넥트 설치부터 지원자 등록까지 사용 흐름을 확인하세요.</p>
-          <button class="sidebar-home" type="button" data-sidebar-home>처음 화면 다시 보기</button>
+          <button class="sidebar-home" type="button" data-sidebar-home><svg class="nav-home-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.4 12 4l8 6.4v8.7A1.5 1.5 0 0 1 18.5 20.6h-13A1.5 1.5 0 0 1 4 19.1z"/><path d="M9.6 20.6v-6h4.8v6"/></svg>처음으로 돌아가기</button>
         </div>
         <ol class="sidebar-steps">
           <li><button class="sidebar-step is-current" type="button" data-flow-stage="install" data-process-target="install" aria-current="step"><span class="sidebar-step-num">1</span><span class="sidebar-step-copy"><strong>설치·실행</strong><small>커넥트 사용 준비</small></span></button></li>

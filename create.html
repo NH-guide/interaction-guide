@@ -2334,6 +2334,7 @@ function renderDone(current){
   const activeRoute = window.currentRoute || (routeB && routeB.classList.contains('on') ? 'b' : 'a');
   box.innerHTML = '<h2 class="nav-title">첫 채용 만들기</h2>'+ 
     '<p class="nav-desc">접수부터 관리까지 필요한 기반을 만들어요.</p>'+ 
+    '<button class="nav-home" type="button" onclick="show(\'intro\')"><svg class="nav-home-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.4 12 4l8 6.4v8.7A1.5 1.5 0 0 1 18.5 20.6h-13A1.5 1.5 0 0 1 4 19.1z"/><path d="M9.6 20.6v-6h4.8v6"/></svg>처음으로 돌아가기</button>'+
     '<div class="mission-nav-items"></div>';
   const list = box.querySelector('.mission-nav-items');
   items.forEach(item=>{
@@ -3204,6 +3205,12 @@ h2{font-size:22px;font-weight:700;line-height:1.4}
   #scr-intro .intro-right{padding:39px 18px}
   #scr-intro .hero-result{gap:10px;padding:12px 13px}
 }
+</style>
+<style id="nav-home-btn">
+.nav-home{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:40px;margin:0;padding:9px 12px;border:1px solid var(--brand-line);border-radius:12px;background:#fff;color:var(--brand-text);font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:background .16s ease}
+.nav-home:hover{background:var(--brand-bg-1)}
+.nav-home-ico{display:block;width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.done-list .mission-nav-items{margin-top:15px;padding-top:14px;border-top:1px solid var(--line)}
 </style>
 </body>
 </html>

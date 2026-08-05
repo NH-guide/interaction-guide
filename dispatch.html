@@ -78,7 +78,9 @@ details .inner{padding:0 14px 14px}
 .btn-primary:hover{background:var(--blue-dark)}
 .btn-ghost{background:#fff;color:var(--blue-dark);border:1.5px solid var(--blue-line)}
 .btn-ghost:hover{background:var(--blue-bg)}
-.textlink{display:inline-block;margin-top:14px;font-size:13px;color:var(--sub);text-decoration:underline;cursor:pointer;background:none;border:none;font-family:inherit}
+.nav-home{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:40px;margin-top:14px;padding:9px 12px;border:1px solid var(--blue-line);border-radius:12px;background:#fff;color:var(--blue-dark);font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:background .16s ease}
+.nav-home:hover{background:var(--blue-bg)}
+.nav-home-ico{display:block;width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
 /* 진단 체크리스트 */
 .chkrow{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;margin:8px 0;font-size:14px;cursor:pointer;background:#fff}
@@ -191,7 +193,7 @@ h2{letter-spacing:-.025em}
 .result-summary{padding:23px 20px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:var(--soft-shadow)}
 .result-summary h1{margin-bottom:8px;font-size:22px}
 .result-summary .sub{font-size:13.5px}
-.result-summary .textlink{min-height:40px;margin-top:10px;padding:8px 0}
+.result-summary .nav-home{margin-top:10px}
 .done-chips{justify-content:flex-start;margin:14px 0 0;gap:6px}
 .chip{padding:4px 9px;border-radius:20px;font-size:10.5px;line-height:1.35}
 .rx-count{display:block;margin-top:12px;color:var(--ink);font-size:13px}
@@ -434,7 +436,7 @@ body{background:var(--bg)}
 .card,.result-summary{border-color:var(--line);border-radius:20px;background:#fff;box-shadow:var(--shadow)}
 .result-summary{padding:30px 28px;box-shadow:var(--soft-shadow)}
 .step-tag{background:var(--blue-bg);border-color:rgba(102,79,255,.14);color:#664FFF}
-.textlink,.guide-link{color:var(--blue)}
+.guide-link{color:var(--blue)}
 .phase.active{color:var(--blue)}
 .phase.done i{border-color:var(--green);background:var(--green)}
 .chkrow:hover{border-color:#D7D9E2;background:#FCFCFE}
@@ -746,8 +748,8 @@ body{background:#FAFAFB}
   .result-summary.steps-open .stepper-caret{transform:rotate(180deg)}
   .result-summary .stepper{display:none;order:2;margin-top:7px}
   .result-summary.steps-open .stepper{display:grid}
-  .result-summary .textlink{display:none;order:3;margin-top:6px}
-  .result-summary.steps-open .textlink{display:inline-block}
+  .result-summary .nav-home{display:none;order:3;margin-top:6px}
+  .result-summary.steps-open .nav-home{display:flex}
   .result-summary .step-copy{display:block;min-width:0}
 }
 @media(max-width:560px){
@@ -862,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h1 id="resultTitle" tabindex="-1">필요한 액션만 골랐어요</h1>
           <p class="sub" id="personalizedSummary"></p>
           <div class="done-chips" id="doneChips" aria-label="이미 하고 있는 일"></div>
-          <button class="textlink" onclick="rediagnose()">답변 다시 선택하기</button>
+          <button class="nav-home" type="button" onclick="rediagnose()"><svg class="nav-home-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.4 12 4l8 6.4v8.7A1.5 1.5 0 0 1 18.5 20.6h-13A1.5 1.5 0 0 1 4 19.1z"/><path d="M9.6 20.6v-6h4.8v6"/></svg>처음으로 돌아가기</button>
           <hr class="result-divider">
           <button class="stepper-toggle" id="stepperToggle" type="button" aria-expanded="false" aria-controls="rxStepper"></button>
           <nav class="stepper" id="rxStepper" aria-label="처방 세부 단계"></nav>
