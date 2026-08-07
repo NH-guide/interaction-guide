@@ -36,7 +36,7 @@ button{touch-action:manipulation;font-family:inherit}
 /* ══ 상단 바 ══ */
 .topbar{position:sticky;top:0;z-index:10;padding:0 var(--pad);border-bottom:1px solid rgba(223,219,234,.9);background:rgba(247,246,251,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .topbar-in{display:flex;align-items:center;gap:16px;width:100%;max-width:var(--content);min-height:62px;margin:0 auto;transition:max-width .3s ease}
-body.cover-mode .topbar-in{max-width:840px}
+body.cover-mode .topbar-in{max-width:960px}
 .logo-link{display:block;flex:0 0 120px;width:120px;height:16px;line-height:0;transition:opacity .15s ease}
 .logo-link:hover{opacity:.86}
 .logo-link>img{display:block;width:120px;height:16px;object-fit:contain}
@@ -59,7 +59,7 @@ body.cover-mode .topbar-in{max-width:840px}
 @keyframes screenIn{from{opacity:0;transform:translateY(12px) scale(.994)}to{opacity:1;transform:none}}
 
 /* ══ 대문 ══ */
-.cover{overflow:hidden;width:100%;max-width:840px;margin:16px auto 0;border:1px solid rgba(102,79,255,.45);border-radius:24px;background:#fff;box-shadow:0 18px 52px rgba(102,79,255,.06)}
+.cover{overflow:hidden;width:100%;max-width:960px;margin:16px auto 0;border:1px solid rgba(102,79,255,.45);border-radius:24px;background:#fff;box-shadow:0 18px 52px rgba(102,79,255,.06)}
 .cover-intro{padding:34px 28px 28px;border-bottom:1px solid rgba(102,79,255,.16);background:rgba(102,79,255,.07)}
 .badge{display:inline-flex;align-items:center;min-height:25px;padding:0 10px;border-radius:999px;background:#fff;color:var(--brand-text);font-size:11px;font-weight:800;letter-spacing:.04em}
 .cover-intro h1{margin-top:18px;font-size:28px;font-weight:700;line-height:1.28;letter-spacing:-.04em}
@@ -74,6 +74,41 @@ body.cover-mode .topbar-in{max-width:840px}
 .cover-head h2{min-width:0;font-size:16px;font-weight:700;line-height:1.35;letter-spacing:-.02em}
 .cover-desc{grid-area:desc;margin-top:4px;color:var(--sub);font-size:13px;font-weight:400;line-height:1.55}
 .cover-arrow{grid-area:arrow;display:grid;place-items:center;color:#B9B9C8}
+
+/* ══ 대문 요약 ══ */
+.cover-sum{padding:26px 24px 26px}
+.sum-head{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px}
+.sum-kicker{display:inline-flex;align-items:center;min-height:23px;padding:0 9px;border:1px solid var(--brand-line);border-radius:999px;background:var(--brand-bg-1);color:var(--brand-text);font-size:10px;font-weight:800;letter-spacing:.04em}
+.sum-hint{color:#A0A0AD;font-size:12px;font-weight:400;line-height:1.5}
+.sum-cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:52px;padding:14px 16px;margin:20px 0 0;border:0;border-radius:14px;background:var(--brand);color:#fff;font:inherit;font-size:15px;font-weight:700;letter-spacing:-.02em;cursor:pointer;transition:background .16s ease}
+.sum-cta:hover{background:var(--brand-hover)}
+.sum-cta .ico-svg{width:17px;height:17px}
+
+/* 대문 요약 · 5단계 스테이지 */
+.sum-stage{margin-top:16px}
+.stage-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.stage-tab{display:flex;align-items:center;justify-content:center;gap:6px;min-width:0;min-height:36px;padding:6px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--sub);font:inherit;font-size:12.5px;font-weight:600;text-align:center;cursor:pointer;transition:.2s}
+.stage-tab i{flex:0 0 auto;display:inline-flex;align-items:center;height:17px;padding:0 6px;border-radius:5px;background:#F0F0F2;color:#7A7F8A;font-size:10px;font-style:normal;font-weight:800;transition:.2s}
+.stage-tab:hover{border-color:var(--brand-line)}
+.stage-tab.on{border-color:rgba(102,79,255,.18);background:rgba(102,79,255,.08);color:#3A1FE6;box-shadow:0 0 0 3px rgba(102,79,255,.06)}
+.stage-tab.on i{background:var(--brand);color:#fff}
+.stage-body{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:0 48px;margin-top:14px}
+/* 설명 + 화면을 한 덩어리로 묶는다 */
+.stage-col{min-width:0;overflow:hidden;border:1px solid #B0A2FF;border-radius:14px;background:#fff}
+.stage-say{display:flex;align-items:center;gap:9px;min-height:64px;margin:0;padding:12px 15px;border-bottom:1px solid #CDC6FF;background:var(--brand-bg-1);color:var(--sub);font-size:13px;font-weight:400;line-height:1.55}
+.stage-say i{flex:0 0 auto;display:inline-flex;align-items:center;height:20px;padding:0 8px;border-radius:6px;background:#fff;color:var(--brand-text);font-size:10px;font-style:normal;font-weight:800}
+.stage-say b{color:var(--brand-text);font-weight:700}
+.stage-col.res{border-color:#8CD1B8}
+.stage-col.res .stage-say{border-bottom-color:#BFE9DD;background:var(--green-bg)}
+.stage-col.res .stage-say i,.stage-col.res .stage-say b{color:var(--green-text)}
+.stage-col .shot-svg{margin:0;border:0;border-radius:0;box-shadow:none}
+/* 설정 → 결과를 잇는 곡선 */
+.stage-link{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:2}
+.stage-link path{fill:none;stroke:#664FFF;stroke-width:1;stroke-linecap:round}
+.stage-arrow{display:none;place-items:center;color:var(--brand)}
+.stage-arrow svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.shot-svg svg.stage-scene{display:none}
+.shot-svg svg.stage-scene.on{display:block}
 
 /* ══ 사이드 내비 ══ */
 .side{min-width:0}
@@ -260,7 +295,9 @@ details .inner b{color:var(--ink);font-weight:600}
   .cover{margin-top:34px}
   .cover-intro{padding:40px 44px 34px}
   .cover-intro h1{font-size:34px}
+  .cover-intro .lead{max-width:680px}
   .cover-list{padding:32px 36px 38px}
+  .cover-sum{padding:34px 36px 30px}
   .shell{grid-template-columns:294px minmax(0,1fr);align-items:start;margin-top:32px}
   .side{position:sticky;top:82px}
   .card{padding:22px 34px 32px}
@@ -284,12 +321,21 @@ details .inner b{color:var(--ink);font-weight:600}
   .cover-intro{padding:26px 18px 24px}
   .cover-intro h1{font-size:25px}
   .cover-list{padding:20px 14px 24px}
+  .cover-sum{padding:24px 14px 22px}
   .card{padding:22px 16px}
   .sub-lab{font-size:19px}
   .p-nav{grid-template-columns:1fr}
   .type-card{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"num name" "num when" "num tags"}
   .type-tags{justify-content:flex-start}
   .mission-nav-items>.nav-step-group,.mission-nav-items>.done-item{flex-basis:152px;min-width:152px}
+}
+/* 좁은 화면에서는 설정 → 결과를 위아래로 쌓는다 */
+@media(max-width:680px){
+  .stage-body{grid-template-columns:minmax(0,1fr);gap:2px}
+  .stage-arrow{display:grid;margin:6px 0;transform:rotate(90deg)}
+  .stage-link{display:none}
+  .stage-say{min-height:0}
+  .stage-tab{flex-direction:column;gap:3px;min-height:44px;padding:6px 3px;font-size:11px;line-height:1.3}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -421,30 +467,439 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h1 id="coverTitle">지원서 동의서, 이 원리만 알면 끝</h1>
       <p class="lead">지원서 하단의 동의 항목은 <b>직접 만드는 것이 아니라, 지원서 항목을 어떻게 설정했는지에 따라 자동으로 표시됩니다.</b></p>
     </div>
-    <div class="cover-list" aria-label="가이드 목차">
-      <button class="cover-card" type="button" onclick="goCard(0)">
-        <span class="cover-num" aria-hidden="true">1</span>
-        <span class="cover-head"><h2>동의서 작동 방식</h2><span class="bdg auto">5종</span></span>
-        <span class="cover-desc">5가지 동의서가 각각 언제 표시되고 어떻게 동작하는지 알고 싶을 때</span>
-        <span class="cover-arrow" aria-hidden="true"><svg class="ico-svg"><use href="#i-arrow-right"/></svg></span>
-      </button>
-      <button class="cover-card" type="button" onclick="goCard(6)">
-        <span class="cover-num" aria-hidden="true">2</span>
-        <span class="cover-head"><h2>상황별 설정 방법</h2><span class="bdg auto">7가지</span></span>
-        <span class="cover-desc">원하는 대로 설정이 되지 않거나 방법을 찾지 못했을 때</span>
-        <span class="cover-arrow" aria-hidden="true"><svg class="ico-svg"><use href="#i-arrow-right"/></svg></span>
-      </button>
-      <button class="cover-card" type="button" onclick="goCard(7)">
-        <span class="cover-num" aria-hidden="true">3</span>
-        <span class="cover-head"><h2>자주 묻는 질문</h2><span class="bdg auto">17문항</span></span>
-        <span class="cover-desc">동의서 표시 · 변경 · 동의 여부 확인이 궁금할 때</span>
-        <span class="cover-arrow" aria-hidden="true"><svg class="ico-svg"><use href="#i-arrow-right"/></svg></span>
-      </button>
-      <button class="cover-card" type="button" onclick="goCard(8)">
-        <span class="cover-num" aria-hidden="true">4</span>
-        <span class="cover-head"><h2>참고 자료 모음</h2></span>
-        <span class="cover-desc">관련 설정 가이드와 개편 안내를 확인할 때</span>
-        <span class="cover-arrow" aria-hidden="true"><svg class="ico-svg"><use href="#i-arrow-right"/></svg></span>
+
+    <!-- ── 대문 요약 · 5단계 스테이지 ── -->
+    <div class="cover-sum">
+      <div class="sum-head">
+        <span class="sum-kicker">한눈에 보기</span>
+        <span class="sum-hint">각 항목 버튼을 클릭하거나 이미지를 클릭하여 자세히 볼 수 있습니다.</span>
+      </div>
+
+      <div class="sum-stage" id="sumStage">
+        <div class="stage-tabs" role="tablist" aria-label="동의서 5종">
+          <button class="stage-tab on" type="button" role="tab" aria-selected="true"  onclick="setStage(0,1)"><i>1-1</i>필수 항목</button>
+          <button class="stage-tab"    type="button" role="tab" aria-selected="false" onclick="setStage(1,1)"><i>1-2</i>선택 항목</button>
+          <button class="stage-tab"    type="button" role="tab" aria-selected="false" onclick="setStage(2,1)"><i>1-3</i>민감정보</button>
+          <button class="stage-tab"    type="button" role="tab" aria-selected="false" onclick="setStage(3,1)"><i>1-4</i>인재풀 활용</button>
+          <button class="stage-tab"    type="button" role="tab" aria-selected="false" onclick="setStage(4,1)"><i>1-5</i>추가 동의서</button>
+        </div>
+
+        <div class="stage-body" id="stageBody">
+          <!-- ── 왼쪽 · 설정 + 관리자 화면 ── -->
+          <div class="stage-col">
+            <p class="stage-say"><i>설정</i><span id="sayL"></span></p>
+            <div class="stage-shot">
+              <div class="shot-svg mock-frame" role="button" tabindex="0" aria-label="관리자 설정 화면 — 누르면 크게 볼 수 있습니다" onclick="zoomSvg(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();zoomSvg(this)}">
+                <svg class="stage-scene on" viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="지원서 편집 화면. 오른쪽 지원서 항목 설정 패널에서 필수 응답 토글이 켜져 있습니다.">
+                  <style>
+                    text{font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,sans-serif}
+                    .sEdge{shape-rendering:crispEdges}
+                    .sChromeT{font-size:9.5px;font-weight:700;fill:#1F2430}
+                    .sCrumb{font-size:10.5px;font-weight:400;fill:#8A8F98}
+                    .sCrumbOn{font-size:10.5px;font-weight:700;fill:#1F2430}
+                    .sPageT{font-size:12.5px;font-weight:700;fill:#1F2430}
+                    .sPageS{font-size:8.5px;font-weight:400;fill:#8A8F98}
+                    .sPanelT{font-size:11px;font-weight:700;fill:#1F2430}
+                    .sBody{font-size:11.5px;font-weight:400;fill:#5A6172}
+                    .sStrong{font-size:11.5px;font-weight:700;fill:#1F2430}
+                    .sSmall{font-size:9.5px;font-weight:400;fill:#5A6172}
+                    .sTiny{font-size:8px;font-weight:700}
+                    .sCanvT{font-size:9px;font-weight:700;fill:#1F2430}
+                    .sCanvS{font-size:8px;font-weight:400;fill:#737887}
+                  </style>
+                  <rect width="460" height="340" fill="#F6F7F9"/>
+                  <rect width="460" height="32" fill="#FFFFFF"/>
+                  <line x1="0" y1="31.5" x2="460" y2="31.5" stroke="#E5E5EF" class="sEdge"/>
+                  <path d="M12 11l9 9M21 11l-9 9" fill="none" stroke="#5A6172" stroke-width="1.4" stroke-linecap="round"/>
+                  <text x="31" y="19.5" class="sChromeT">지원서 편집</text>
+                  <rect x="0" y="32" width="38" height="308" fill="#FAFAFB"/>
+                  <line x1="37.5" y1="32" x2="37.5" y2="340" stroke="#E5E5EF" class="sEdge"/>
+                  <circle cx="19" cy="52" r="10" fill="#EDEDF2"/>
+                  <path d="M19 47v10M14 52h10" fill="none" stroke="#4B4DE1" stroke-width="1.6" stroke-linecap="round"/>
+                  <rect x="11" y="74" width="16" height="16" rx="5" fill="#E9E9F1"/>
+                  <rect x="11" y="98" width="16" height="16" rx="5" fill="#E9E9F1"/>
+                  <rect x="50" y="44" width="166" height="18" rx="5" fill="#FFFFFF" stroke="#DDDDE9"/>
+                  <rect x="60" y="51" width="66" height="5" rx="2.5" fill="#E7E9EE"/>
+                  <rect x="50" y="70" width="166" height="116" rx="7" fill="#FFFFFF" stroke="#8F91EA" stroke-width="1.3"/>
+                  <text x="60" y="86" class="sCanvT">경력사항</text>
+                  <line x1="60" y1="94" x2="206" y2="94" stroke="#F0F1F7" class="sEdge"/>
+                  <rect x="60" y="102" width="146" height="16" rx="4" fill="#FAFAFB" stroke="#E9E9F1"/>
+                  <rect x="60" y="124" width="70" height="16" rx="4" fill="#FAFAFB" stroke="#E9E9F1"/>
+                  <rect x="136" y="124" width="70" height="16" rx="4" fill="#FAFAFB" stroke="#E9E9F1"/>
+                  <rect x="60" y="146" width="146" height="26" rx="4" fill="#FAFAFB" stroke="#E9E9F1"/>
+                  <rect x="50" y="196" width="166" height="40" rx="7" fill="#FFFFFF" stroke="#E5E5EF"/>
+                  <rect x="60" y="208" width="58" height="5" rx="2.5" fill="#ECEEF2"/>
+                  <rect x="60" y="220" width="120" height="5" rx="2.5" fill="#ECEEF2"/>
+                  <rect x="50" y="246" width="166" height="26" rx="6" fill="#FAFAFB" stroke="#D5D7E0" stroke-dasharray="4 3"/>
+                  <text x="133" y="262.5" text-anchor="middle" class="sCanvS">+ 지원서 항목 추가</text>
+                  <rect x="228" y="32" width="232" height="308" fill="#FFFFFF"/>
+                  <line x1="227.5" y1="32" x2="227.5" y2="340" stroke="#E5E5EF" class="sEdge"/>
+                  <text x="244" y="56" class="sPanelT">지원서 항목 설정</text>
+                  <line x1="244" y1="66" x2="444" y2="66" stroke="#F0F1F7" class="sEdge"/>
+                  <text x="244" y="88" class="sBody">타입</text>
+                  <text x="444" y="88" text-anchor="end" class="sStrong">경력사항</text>
+                  <line x1="244" y1="100" x2="444" y2="100" stroke="#F0F1F7" class="sEdge"/>
+                  <rect x="234" y="108" width="220" height="34" rx="8" fill="#EFEFFF"/>
+                  <text x="244" y="129" class="sStrong">필수 응답</text>
+                  <text x="400" y="129" text-anchor="end" class="sTiny" fill="#4B4DE1">ON</text>
+                  <rect x="408" y="116" width="36" height="17" rx="8.5" fill="#4B4DE1"/>
+                  <circle cx="435.5" cy="124.5" r="6.2" fill="#FFFFFF"/>
+                  <line x1="244" y1="150" x2="444" y2="150" stroke="#F0F1F7" class="sEdge"/>
+                  <text x="244" y="172" class="sBody">설명글 추가</text>
+                  <rect x="408" y="159" width="36" height="17" rx="8.5" fill="#D5D6DE"/>
+                  <circle cx="416.5" cy="167.5" r="6.2" fill="#FFFFFF"/>
+                  <line x1="244" y1="186" x2="444" y2="186" stroke="#F0F1F7" class="sEdge"/>
+                  <text x="244" y="208" class="sBody">상세 항목</text>
+                  <rect x="408" y="195" width="36" height="17" rx="8.5" fill="#D5D6DE"/>
+                  <circle cx="416.5" cy="203.5" r="6.2" fill="#FFFFFF"/>
+                  <line x1="244" y1="222" x2="444" y2="222" stroke="#F0F1F7" class="sEdge"/>
+                  <text x="244" y="244" class="sBody">열람 권한</text>
+                  <rect x="366" y="230" width="78" height="20" rx="6" fill="#FAFAFB" stroke="#DDDDE9"/>
+                  <text x="405" y="244" text-anchor="middle" class="sSmall">전체 사용자</text>
+                  <line x1="244" y1="260" x2="444" y2="260" stroke="#F0F1F7" class="sEdge"/>
+                  <rect x="244" y="278" width="130" height="6" rx="3" fill="#ECEEF2"/>
+                  <rect x="244" y="292" width="96" height="6" rx="3" fill="#ECEEF2"/>
+                </svg>
+
+                <svg class="stage-scene" viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="지원서 편집 화면. 오른쪽 지원서 항목 설정 패널에서 필수 응답 토글이 꺼져 있습니다.">
+                  <style>
+                    text{font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,sans-serif}
+                    .sEdge{shape-rendering:crispEdges}
+                    .sChromeT{font-size:9.5px;font-weight:700;fill:#1F2430}
+                    .sCrumb{font-size:10.5px;font-weight:400;fill:#8A8F98}
+                    .sCrumbOn{font-size:10.5px;font-weight:700;fill:#1F2430}
+                    .sPageT{font-size:12.5px;font-weight:700;fill:#1F2430}
+                    .sPageS{font-size:8.5px;font-weight:400;fill:#8A8F98}
+                    .sPanelT{font-size:11px;font-weight:700;fill:#1F2430}
+                    .sBody{font-size:11.5px;font-weight:400;fill:#5A6172}
+                    .sStrong{font-size:11.5px;font-weight:700;fill:#1F2430}
+                    .sSmall{font-size:9.5px;font-weight:400;fill:#5A6172}
+                    .sTiny{font-size:8px;font-weight:700}
+                    .sCanvT{font-size:9px;font-weight:700;fill:#1F2430}
+                    .sCanvS{font-size:8px;font-weight:400;fill:#737887}
+                  </style>
+                  <rect width="460" height="340" fill="#F6F7F9"/>
+                  <rect width="460" height="32" fill="#FFFFFF"/>
+                  <line x1="0" y1="31.5" x2="460" y2="31.5" stroke="#E5E5EF" class="sEdge"/>
+                  <path d="M12 11l9 9M21 11l-9 9" fill="none" stroke="#5A6172" stroke-width="1.4" stroke-linecap="round"/>
+                  <text x="31" y="19.5" class="sChromeT">지원서 편집</text>
+                  <rect x="0" y="32" width="38" height="308" fill="#FAFAFB"/>
+                  <line x1="37.5" y1="32" x2="37.5" y2="340" stroke="#E5E5EF" class="sEdge"/>
+                  <circle cx="19" cy="52" r="10" fill="#EDEDF2"/>
+                  <path d="M19 47v10M14 52h10" fill="none" stroke="#4B4DE1" stroke-width="1.6" stroke-linecap="round"/>
+                  <rect x="11" y="74" width="16" height="16" rx="5" fill="#E9E9F1"/>
+                  <rect x="11" y="98" width="16" height="16" rx="5" fill="#E9E9F1"/>
+                  <rect x="50" y="44" width="166" height="18" rx="5" fill="#FFFFFF" stroke="#DDDDE9"/>
+                  <rect x="60" y="51" width="66" height="5" rx="2.5" fill="#E7E9EE"/>
+                  <rect x="50" y="70" width="166" height="116" rx="7" fill="#FFFFFF" stroke="#8F91EA" stroke-width="1.3"/>
+                  <text x="60" y="86" class="sCanvT">포트폴리오</text>
+                  <line x1="60" y1="94" x2="206" y2="94" stroke="#F0F1F7" class="sEdge"/>
+                  <rect x="60" y="102" width="146" height="16" rx="4" fill="#FAFAFB" stroke="#E9E9F1"/>
+                  <rect x="60" y="124" width="70" height="16" rx="4" fill="#FAFAFB" stroke="#E9E9F1"/>
+                  <rect x="136" y="124" width="70" height="16" rx="4" fill="#FAFAFB" stroke="#E9E9F1"/>
+                  <rect x="60" y="146" width="146" height="26" rx="4" fill="#FAFAFB" stroke="#E9E9F1"/>
+                  <rect x="50" y="196" width="166" height="40" rx="7" fill="#FFFFFF" stroke="#E5E5EF"/>
+                  <rect x="60" y="208" width="58" height="5" rx="2.5" fill="#ECEEF2"/>
+                  <rect x="60" y="220" width="120" height="5" rx="2.5" fill="#ECEEF2"/>
+                  <rect x="50" y="246" width="166" height="26" rx="6" fill="#FAFAFB" stroke="#D5D7E0" stroke-dasharray="4 3"/>
+                  <text x="133" y="262.5" text-anchor="middle" class="sCanvS">+ 지원서 항목 추가</text>
+                  <rect x="228" y="32" width="232" height="308" fill="#FFFFFF"/>
+                  <line x1="227.5" y1="32" x2="227.5" y2="340" stroke="#E5E5EF" class="sEdge"/>
+                  <text x="244" y="56" class="sPanelT">지원서 항목 설정</text>
+                  <line x1="244" y1="66" x2="444" y2="66" stroke="#F0F1F7" class="sEdge"/>
+                  <text x="244" y="88" class="sBody">타입</text>
+                  <text x="444" y="88" text-anchor="end" class="sStrong">포트폴리오</text>
+                  <line x1="244" y1="100" x2="444" y2="100" stroke="#F0F1F7" class="sEdge"/>
+                  <rect x="234" y="108" width="220" height="34" rx="8" fill="#EFEFFF"/>
+                  <text x="244" y="129" class="sStrong">필수 응답</text>
+                  <text x="400" y="129" text-anchor="end" class="sTiny" fill="#8A8F98">OFF</text>
+                  <rect x="408" y="116" width="36" height="17" rx="8.5" fill="#D5D6DE"/>
+                  <circle cx="416.5" cy="124.5" r="6.2" fill="#FFFFFF"/>
+                  <line x1="244" y1="150" x2="444" y2="150" stroke="#F0F1F7" class="sEdge"/>
+                  <text x="244" y="172" class="sBody">설명글 추가</text>
+                  <rect x="408" y="159" width="36" height="17" rx="8.5" fill="#D5D6DE"/>
+                  <circle cx="416.5" cy="167.5" r="6.2" fill="#FFFFFF"/>
+                  <line x1="244" y1="186" x2="444" y2="186" stroke="#F0F1F7" class="sEdge"/>
+                  <text x="244" y="208" class="sBody">상세 항목</text>
+                  <rect x="408" y="195" width="36" height="17" rx="8.5" fill="#D5D6DE"/>
+                  <circle cx="416.5" cy="203.5" r="6.2" fill="#FFFFFF"/>
+                  <line x1="244" y1="222" x2="444" y2="222" stroke="#F0F1F7" class="sEdge"/>
+                  <text x="244" y="244" class="sBody">열람 권한</text>
+                  <rect x="366" y="230" width="78" height="20" rx="6" fill="#FAFAFB" stroke="#DDDDE9"/>
+                  <text x="405" y="244" text-anchor="middle" class="sSmall">전체 사용자</text>
+                  <line x1="244" y1="260" x2="444" y2="260" stroke="#F0F1F7" class="sEdge"/>
+                  <rect x="244" y="278" width="130" height="6" rx="3" fill="#ECEEF2"/>
+                  <rect x="244" y="292" width="96" height="6" rx="3" fill="#ECEEF2"/>
+                </svg>
+
+                <svg class="stage-scene" viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="지원서 편집 화면. 오른쪽 지원서 항목 추가 패널에서 보훈 여부와 장애 여부를 선택해 지원서에 추가한 모습입니다.">
+                  <style>
+                    text{font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,sans-serif}
+                    .sEdge{shape-rendering:crispEdges}
+                    .sChromeT{font-size:9.5px;font-weight:700;fill:#1F2430}
+                    .sCrumb{font-size:10.5px;font-weight:400;fill:#8A8F98}
+                    .sCrumbOn{font-size:10.5px;font-weight:700;fill:#1F2430}
+                    .sPageT{font-size:12.5px;font-weight:700;fill:#1F2430}
+                    .sPageS{font-size:8.5px;font-weight:400;fill:#8A8F98}
+                    .sPanelT{font-size:11px;font-weight:700;fill:#1F2430}
+                    .sBody{font-size:11.5px;font-weight:400;fill:#5A6172}
+                    .sStrong{font-size:11.5px;font-weight:700;fill:#1F2430}
+                    .sSmall{font-size:9.5px;font-weight:400;fill:#5A6172}
+                    .sTiny{font-size:8px;font-weight:700}
+                    .sCanvT{font-size:9px;font-weight:700;fill:#1F2430}
+                    .sCanvS{font-size:8px;font-weight:400;fill:#737887}
+                  </style>
+                  <rect width="460" height="340" fill="#F6F7F9"/>
+                  <rect width="460" height="32" fill="#FFFFFF"/>
+                  <line x1="0" y1="31.5" x2="460" y2="31.5" stroke="#E5E5EF" class="sEdge"/>
+                  <path d="M12 11l9 9M21 11l-9 9" fill="none" stroke="#5A6172" stroke-width="1.4" stroke-linecap="round"/>
+                  <text x="31" y="19.5" class="sChromeT">지원서 편집</text>
+                  <rect x="0" y="32" width="38" height="308" fill="#FAFAFB"/>
+                  <line x1="37.5" y1="32" x2="37.5" y2="340" stroke="#E5E5EF" class="sEdge"/>
+                  <circle cx="19" cy="52" r="10" fill="#EDEDF2"/>
+                  <path d="M19 47v10M14 52h10" fill="none" stroke="#4B4DE1" stroke-width="1.6" stroke-linecap="round"/>
+                  <rect x="11" y="74" width="16" height="16" rx="5" fill="#E9E9F1"/>
+                  <rect x="11" y="98" width="16" height="16" rx="5" fill="#E9E9F1"/>
+                  <rect x="50" y="44" width="166" height="18" rx="5" fill="#FFFFFF" stroke="#DDDDE9"/>
+                  <rect x="60" y="51" width="66" height="5" rx="2.5" fill="#E7E9EE"/>
+                  <rect x="50" y="72" width="166" height="28" rx="6" fill="#FFFFFF" stroke="#E5E5EF"/>
+                  <text x="64" y="90" class="sCanvS">이름</text>
+                  <rect x="50" y="106" width="166" height="28" rx="6" fill="#FFFFFF" stroke="#E5E5EF"/>
+                  <text x="64" y="124" class="sCanvS">연락처</text>
+                  <rect x="50" y="140" width="166" height="28" rx="6" fill="#F5F3FF" stroke="#B9AEFF" stroke-width="1.2"/>
+                  <text x="64" y="158" class="sCanvT">보훈 여부</text>
+                  <rect x="50" y="174" width="166" height="28" rx="6" fill="#F5F3FF" stroke="#B9AEFF" stroke-width="1.2"/>
+                  <text x="64" y="192" class="sCanvT">장애 여부</text>
+                  <rect x="50" y="212" width="166" height="26" rx="6" fill="#FAFAFB" stroke="#D5D7E0" stroke-dasharray="4 3"/>
+                  <text x="133" y="228.5" text-anchor="middle" class="sCanvS">+ 지원서 항목 추가</text>
+                  <rect x="228" y="32" width="232" height="308" fill="#FFFFFF"/>
+                  <line x1="227.5" y1="32" x2="227.5" y2="340" stroke="#E5E5EF" class="sEdge"/>
+                  <text x="244" y="56" class="sPanelT">지원서 항목 추가</text>
+                  <line x1="244" y1="66" x2="444" y2="66" stroke="#F0F1F7" class="sEdge"/>
+                  <rect x="246" y="86" width="12" height="12" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
+                  <text x="266" y="97" class="sBody">병역 사항</text>
+                  <rect x="246" y="122" width="12" height="12" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
+                  <text x="266" y="133" class="sBody">자격증 · 어학</text>
+                  <rect x="234" y="148" width="220" height="32" rx="8" fill="#EFEFFF"/>
+                  <rect x="246" y="158" width="12" height="12" rx="3" fill="#4B4DE1"/>
+                  <path d="M249 164l2.4 2.4 5.2-5.2" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <text x="266" y="169" class="sStrong">보훈 여부</text>
+                  <rect x="384" y="156" width="52" height="16" rx="8" fill="#FFFFFF"/>
+                  <text x="410" y="167.5" text-anchor="middle" class="sTiny" fill="#D33333">민감정보</text>
+                  <rect x="234" y="184" width="220" height="32" rx="8" fill="#EFEFFF"/>
+                  <rect x="246" y="194" width="12" height="12" rx="3" fill="#4B4DE1"/>
+                  <path d="M249 200l2.4 2.4 5.2-5.2" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <text x="266" y="205" class="sStrong">장애 여부</text>
+                  <rect x="384" y="192" width="52" height="16" rx="8" fill="#FFFFFF"/>
+                  <text x="410" y="203.5" text-anchor="middle" class="sTiny" fill="#D33333">민감정보</text>
+                  <rect x="244" y="234" width="200" height="26" rx="7" fill="#F0F1F5" stroke="#DDDDE9"/>
+                  <text x="344" y="251" text-anchor="middle" class="sSmall" fill="#5A6172">선택한 항목 추가</text>
+                </svg>
+
+                <svg class="stage-scene" viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="채용 관리 설정의 개인정보 보호 설정 화면. 인재풀 활용 동의서 토글이 켜져 있습니다.">
+                  <style>
+                    text{font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,sans-serif}
+                    .sEdge{shape-rendering:crispEdges}
+                    .sChromeT{font-size:9.5px;font-weight:700;fill:#1F2430}
+                    .sCrumb{font-size:10.5px;font-weight:400;fill:#8A8F98}
+                    .sCrumbOn{font-size:10.5px;font-weight:700;fill:#1F2430}
+                    .sPageT{font-size:12.5px;font-weight:700;fill:#1F2430}
+                    .sPageS{font-size:8.5px;font-weight:400;fill:#8A8F98}
+                    .sPanelT{font-size:11px;font-weight:700;fill:#1F2430}
+                    .sBody{font-size:11.5px;font-weight:400;fill:#5A6172}
+                    .sStrong{font-size:11.5px;font-weight:700;fill:#1F2430}
+                    .sSmall{font-size:9.5px;font-weight:400;fill:#5A6172}
+                    .sTiny{font-size:8px;font-weight:700}
+                    .sCanvT{font-size:9px;font-weight:700;fill:#1F2430}
+                    .sCanvS{font-size:8px;font-weight:400;fill:#737887}
+                  </style>
+                  <rect width="460" height="340" fill="#F6F7F9"/>
+                  <rect width="460" height="32" fill="#FFFFFF"/>
+                  <line x1="0" y1="31.5" x2="460" y2="31.5" stroke="#E5E5EF" class="sEdge"/>
+                  <text x="16" y="20.5" class="sCrumb">채용 관리 <tspan fill="#C2C6CF">›</tspan> 채용 관리 설정 <tspan fill="#C2C6CF">›</tspan> <tspan class="sCrumbOn">개인정보 보호 설정</tspan></text>
+                  <rect x="0" y="32" width="46" height="308" fill="#FAFAFB"/>
+                  <line x1="45.5" y1="32" x2="45.5" y2="340" stroke="#E5E5EF" class="sEdge"/>
+                  <rect x="14" y="46" width="18" height="18" rx="5" fill="#E9E9F1"/>
+                  <rect x="14" y="74" width="18" height="18" rx="5" fill="#E9E9F1"/>
+                  <rect x="14" y="102" width="18" height="18" rx="5" fill="#E9E9F1"/>
+                  <rect x="8" y="126" width="30" height="26" rx="8" fill="#EFEFFF"/>
+                  <rect x="14" y="130" width="18" height="18" rx="5" fill="#664FFF" opacity=".8"/>
+                  <rect x="14" y="164" width="18" height="18" rx="5" fill="#E9E9F1"/>
+                  <text x="66" y="60" class="sPageT">개인정보 보호 설정</text>
+                  <text x="66" y="76" class="sPageS">워크스페이스 전체에 공통 적용됩니다</text>
+                  <rect x="60" y="90" width="384" height="204" rx="10" fill="#FFFFFF" stroke="#E5E5EF"/>
+                  <text x="78" y="118" class="sBody">개인정보처리방침</text>
+                  <rect x="352" y="104" width="74" height="22" rx="6" fill="#FFFFFF" stroke="#DDDDE9"/>
+                  <text x="389" y="119" text-anchor="middle" class="sSmall">설정하기</text>
+                  <line x1="78" y1="138" x2="426" y2="138" stroke="#F0F1F7" class="sEdge"/>
+                  <rect x="68" y="146" width="368" height="36" rx="8" fill="#EFEFFF"/>
+                  <text x="78" y="169" class="sStrong">인재풀 활용 동의서</text>
+                  <text x="382" y="169" text-anchor="end" class="sTiny" fill="#4B4DE1">ON</text>
+                  <rect x="390" y="156" width="36" height="17" rx="8.5" fill="#4B4DE1"/>
+                  <circle cx="417.5" cy="164.5" r="6.2" fill="#FFFFFF"/>
+                  <line x1="78" y1="194" x2="426" y2="194" stroke="#F0F1F7" class="sEdge"/>
+                  <text x="78" y="216" class="sBody">추가 동의서</text>
+                  <text x="426" y="216" text-anchor="end" class="sSmall" fill="#8A8F98">0개 / 최대 3개</text>
+                  <line x1="78" y1="234" x2="426" y2="234" stroke="#F0F1F7" class="sEdge"/>
+                  <rect x="78" y="250" width="348" height="28" rx="7" fill="#FAFAFB" stroke="#D5D7E0" stroke-dasharray="4 3"/>
+                  <text x="252" y="268" text-anchor="middle" class="sSmall" fill="#737887">+ 추가 동의서 만들기</text>
+                </svg>
+
+                <svg class="stage-scene" viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="채용 관리 설정의 개인정보 보호 설정 화면. 추가 동의서를 직접 만들고 토글을 켠 모습입니다.">
+                  <style>
+                    text{font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,sans-serif}
+                    .sEdge{shape-rendering:crispEdges}
+                    .sChromeT{font-size:9.5px;font-weight:700;fill:#1F2430}
+                    .sCrumb{font-size:10.5px;font-weight:400;fill:#8A8F98}
+                    .sCrumbOn{font-size:10.5px;font-weight:700;fill:#1F2430}
+                    .sPageT{font-size:12.5px;font-weight:700;fill:#1F2430}
+                    .sPageS{font-size:8.5px;font-weight:400;fill:#8A8F98}
+                    .sPanelT{font-size:11px;font-weight:700;fill:#1F2430}
+                    .sBody{font-size:11.5px;font-weight:400;fill:#5A6172}
+                    .sStrong{font-size:11.5px;font-weight:700;fill:#1F2430}
+                    .sSmall{font-size:9.5px;font-weight:400;fill:#5A6172}
+                    .sTiny{font-size:8px;font-weight:700}
+                    .sCanvT{font-size:9px;font-weight:700;fill:#1F2430}
+                    .sCanvS{font-size:8px;font-weight:400;fill:#737887}
+                  </style>
+                  <rect width="460" height="340" fill="#F6F7F9"/>
+                  <rect width="460" height="32" fill="#FFFFFF"/>
+                  <line x1="0" y1="31.5" x2="460" y2="31.5" stroke="#E5E5EF" class="sEdge"/>
+                  <text x="16" y="20.5" class="sCrumb">채용 관리 <tspan fill="#C2C6CF">›</tspan> 채용 관리 설정 <tspan fill="#C2C6CF">›</tspan> <tspan class="sCrumbOn">개인정보 보호 설정</tspan></text>
+                  <rect x="0" y="32" width="46" height="308" fill="#FAFAFB"/>
+                  <line x1="45.5" y1="32" x2="45.5" y2="340" stroke="#E5E5EF" class="sEdge"/>
+                  <rect x="14" y="46" width="18" height="18" rx="5" fill="#E9E9F1"/>
+                  <rect x="14" y="74" width="18" height="18" rx="5" fill="#E9E9F1"/>
+                  <rect x="14" y="102" width="18" height="18" rx="5" fill="#E9E9F1"/>
+                  <rect x="8" y="126" width="30" height="26" rx="8" fill="#EFEFFF"/>
+                  <rect x="14" y="130" width="18" height="18" rx="5" fill="#664FFF" opacity=".8"/>
+                  <rect x="14" y="164" width="18" height="18" rx="5" fill="#E9E9F1"/>
+                  <text x="66" y="60" class="sPageT">개인정보 보호 설정</text>
+                  <text x="66" y="76" class="sPageS">워크스페이스 전체에 공통 적용됩니다</text>
+                  <rect x="60" y="90" width="384" height="210" rx="10" fill="#FFFFFF" stroke="#E5E5EF"/>
+                  <text x="78" y="116" class="sBody">개인정보처리방침</text>
+                  <rect x="352" y="102" width="74" height="22" rx="6" fill="#FFFFFF" stroke="#DDDDE9"/>
+                  <text x="389" y="117" text-anchor="middle" class="sSmall">설정하기</text>
+                  <line x1="78" y1="134" x2="426" y2="134" stroke="#F0F1F7" class="sEdge"/>
+                  <text x="78" y="156" class="sBody">인재풀 활용 동의서</text>
+                  <rect x="390" y="143" width="36" height="17" rx="8.5" fill="#4B4DE1"/>
+                  <circle cx="417.5" cy="151.5" r="6.2" fill="#FFFFFF"/>
+                  <line x1="78" y1="174" x2="426" y2="174" stroke="#F0F1F7" class="sEdge"/>
+                  <rect x="68" y="184" width="368" height="62" rx="9" fill="#FFFFFF" stroke="#8F91EA" stroke-width="1.4"/>
+                  <text x="82" y="206" class="sStrong">제3자 제공 동의</text>
+                  <text x="382" y="206" text-anchor="end" class="sTiny" fill="#4B4DE1">ON</text>
+                  <rect x="390" y="193" width="36" height="17" rx="8.5" fill="#4B4DE1"/>
+                  <circle cx="417.5" cy="201.5" r="6.2" fill="#FFFFFF"/>
+                  <rect x="82" y="216" width="52" height="17" rx="8.5" fill="#FDEAEA"/>
+                  <text x="108" y="227.2" text-anchor="middle" class="sTiny" fill="#D33333">필수 동의</text>
+                  <rect x="140" y="216" width="49" height="17" rx="8.5" fill="#F0F1F5"/>
+                  <text x="164.5" y="227.2" text-anchor="middle" class="sTiny" fill="#737887">체크박스</text>
+                  <rect x="78" y="258" width="348" height="26" rx="7" fill="#FAFAFB" stroke="#D5D7E0" stroke-dasharray="4 3"/>
+                  <text x="252" y="275" text-anchor="middle" class="sSmall" fill="#737887">+ 추가 동의서 만들기</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4.5 12h15"/><path d="m13.2 5.8 6.3 6.2-6.3 6.2"/></svg>
+          </div>
+
+          <!-- ── 오른쪽 · 결과 + 지원자 지원서 ── -->
+          <div class="stage-col res">
+            <p class="stage-say"><i>결과</i><span id="sayR"></span></p>
+            <div class="stage-shot">
+              <div class="shot-svg mock-frame" role="button" tabindex="0" aria-label="지원자가 보는 지원서 — 누르면 크게 볼 수 있습니다" onclick="zoomSvg(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();zoomSvg(this)}">
+                <svg viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="지원자가 보는 지원서. 동의 항목 네 가지가 있고 필수 항목 동의서 자리는 비어 있습니다.">
+                  <style>
+                    text{font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,sans-serif}
+                    .pEdge{shape-rendering:crispEdges}
+                    .pTitle{font-size:14px;font-weight:700;fill:#1F2430}
+                    .pSec{font-size:10px;font-weight:700;fill:#737887}
+                    .pTxt{font-size:10.5px;font-weight:400;fill:#1F2430}
+                    .pGhost{font-size:10.5px;font-weight:400;fill:#6E7382}
+                    .pBdg{font-size:8px;font-weight:700}
+                    .pBtn{font-size:10.5px;font-weight:700;fill:#FFFFFF}
+                    .cRow{opacity:.45;transition:opacity .3s ease}
+                    .cRow.on{opacity:1}
+                    .cRing{opacity:0;transition:opacity .3s ease}
+                    .cRow.on .cRing{opacity:1}
+                    @media(prefers-reduced-motion:reduce){.cRow,.cRing{transition:none}}
+                  </style>
+                  <rect width="460" height="340" fill="#EEF0F4"/>
+                  <rect x="26" y="0" width="408" height="340" fill="#FFFFFF"/>
+                  <line x1="26.5" y1="0" x2="26.5" y2="340" stroke="#E5E5EF" class="pEdge"/>
+                  <line x1="433.5" y1="0" x2="433.5" y2="340" stroke="#E5E5EF" class="pEdge"/>
+                  <text x="50" y="32" class="pTitle">지원서 작성</text>
+                  <line x1="50" y1="46" x2="410" y2="46" stroke="#EDEEF3" class="pEdge"/>
+                  <rect x="50" y="58" width="72" height="6" rx="3" fill="#E4E7ED"/>
+                  <rect x="50" y="70" width="360" height="24" rx="7" fill="#FAFAFB" stroke="#E9E9F1"/>
+                  <line x1="50" y1="106" x2="410" y2="106" stroke="#EDEEF3" class="pEdge"/>
+                  <text x="50" y="124" class="pSec">개인정보 수집 및 이용 동의</text>
+
+                  <g class="cRow on">
+                    <rect class="cRing" x="44" y="131" width="372" height="36" rx="10" fill="none" stroke="#C9CAFF" stroke-width="5"/>
+                    <rect x="50" y="136" width="360" height="26" rx="7" fill="#F4F4F7" stroke="#CDD0D8" stroke-dasharray="4 3"/>
+                    <text x="66" y="153" class="pGhost">필수 항목 동의서는 표시되지 않습니다</text>
+                  </g>
+                  <g class="cRow">
+                    <rect class="cRing" x="44" y="163" width="372" height="36" rx="10" fill="none" stroke="#C9CAFF" stroke-width="5"/>
+                    <rect x="50" y="168" width="360" height="26" rx="7" fill="#FFFFFF" stroke="#DDDDE9"/>
+                    <rect x="62" y="175.5" width="11" height="11" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
+                    <text x="80" y="185" class="pTxt">선택 항목 수집 및 이용에 동의합니다</text>
+                    <rect x="330" y="173.5" width="32" height="15" rx="7.5" fill="#F0F1F5"/>
+                    <text x="346" y="184.3" text-anchor="middle" class="pBdg" fill="#737887">선택</text>
+                    <path d="M378 178.5l3.5 3.5 3.5-3.5" fill="none" stroke="#8A8F98" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <g class="cRow">
+                    <rect class="cRing" x="44" y="195" width="372" height="36" rx="10" fill="none" stroke="#C9CAFF" stroke-width="5"/>
+                    <rect x="50" y="200" width="360" height="26" rx="7" fill="#FFFFFF" stroke="#DDDDE9"/>
+                    <rect x="62" y="207.5" width="11" height="11" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
+                    <text x="80" y="217" class="pTxt">민감정보 수집 및 이용에 동의합니다</text>
+                    <rect x="330" y="205.5" width="32" height="15" rx="7.5" fill="#F0F1F5"/>
+                    <text x="346" y="216.3" text-anchor="middle" class="pBdg" fill="#737887">선택</text>
+                    <path d="M378 210.5l3.5 3.5 3.5-3.5" fill="none" stroke="#8A8F98" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <g class="cRow">
+                    <rect class="cRing" x="44" y="227" width="372" height="36" rx="10" fill="none" stroke="#C9CAFF" stroke-width="5"/>
+                    <rect x="50" y="232" width="360" height="26" rx="7" fill="#FFFFFF" stroke="#DDDDE9"/>
+                    <rect x="62" y="239.5" width="11" height="11" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
+                    <text x="80" y="249" class="pTxt">인재풀 활용에 동의합니다</text>
+                    <rect x="330" y="237.5" width="32" height="15" rx="7.5" fill="#F0F1F5"/>
+                    <text x="346" y="248.3" text-anchor="middle" class="pBdg" fill="#737887">선택</text>
+                    <path d="M378 242.5l3.5 3.5 3.5-3.5" fill="none" stroke="#8A8F98" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <g class="cRow">
+                    <rect class="cRing" x="44" y="259" width="372" height="36" rx="10" fill="none" stroke="#C9CAFF" stroke-width="5"/>
+                    <rect x="50" y="264" width="360" height="26" rx="7" fill="#FFFFFF" stroke="#DDDDE9"/>
+                    <rect x="62" y="271.5" width="11" height="11" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
+                    <text x="80" y="281" class="pTxt">제3자 제공에 동의합니다</text>
+                    <rect x="330" y="269.5" width="32" height="15" rx="7.5" fill="#FDEAEA"/>
+                    <text x="346" y="280.3" text-anchor="middle" class="pBdg" fill="#D33333">필수</text>
+                    <path d="M378 274.5l3.5 3.5 3.5-3.5" fill="none" stroke="#8A8F98" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <rect x="50" y="302" width="360" height="28" rx="8" fill="#E89490"/>
+                  <text x="230" y="320.5" text-anchor="middle" class="pBtn">지원서 제출하기</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <svg class="stage-link" id="stageLink" aria-hidden="true">
+            <defs>
+              <marker id="lkHead" viewBox="0 0 12 12" refX="8.5" refY="6" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+                <path d="M3.5 2L8.5 6L3.5 10" fill="none" stroke="#664FFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </marker>
+            </defs>
+            <path id="lk0" marker-end="url(#lkHead)"></path>
+            <path id="lk1" marker-end="url(#lkHead)"></path>
+          </svg>
+        </div>
+      </div>
+
+      <button class="sum-cta" type="button" onclick="goCard(0)">
+        항목별 설정 상세 보기
+        <svg class="ico-svg" aria-hidden="true"><use href="#i-arrow-right"/></svg>
       </button>
     </div>
   </div>
@@ -2053,6 +2508,7 @@ function goCover(){
   document.body.classList.add('cover-mode');
   [0,1,2,3].forEach(ph=>document.getElementById('phase'+ph).classList.remove('active'));
   lastStepKey = null;
+  restartStage();
   history.replaceState(null,'','#cover');
   window.scrollTo({top:0});
 }
@@ -2099,7 +2555,8 @@ function zoom(img){
 }
 /* 목업 SVG 확대 — 이 SVG에는 id가 없어 사본을 그대로 붙여도 url(#id) 충돌이 없다 */
 function zoomSvg(wrap){
-  const src = wrap.querySelector('svg');
+  /* 스테이지처럼 여러 장면이 겹쳐 있으면 현재 보이는 장면을 확대한다 */
+  const src = wrap.querySelector('svg.stage-scene.on') || wrap.querySelector('svg');
   if(!src) return;
   track('click_visual_zoom',{img:'mock_optional_consent'});
   const box = document.getElementById('dialogSvg');
@@ -2120,6 +2577,98 @@ function closeZoom(){
   document.getElementById('dialogImage').hidden = false;
 }
 document.getElementById('imageDialog').addEventListener('click', e=>{ if(e.target.id==='imageDialog') closeZoom(); });
+/* ═══ 대문 요약 스테이지 ═══ */
+const STAGE = [
+  {l:'채용 담당자가 지원서 항목을 <b>[필수 응답]</b>으로 설정하면',
+   r:'지원서 하단에는 <b>해당 항목에 대한 동의서가 표시되지 않습니다</b><br>필수 항목은 지원자의 동의 없이 수집하는 항목으로 취급됩니다'},
+  {l:'채용 담당자가 지원서 항목의 <b>[필수 응답]을 끄면,</b><br>해당 항목은 <b>[선택 응답]</b> 항목으로 설정되며',
+   r:'지원서 하단에는 해당 항목에 대한 <b>[선택 항목 동의서]</b>가 자동으로 표시됩니다.'},
+  {l:'채용 담당자가 지원서에 <b>[보훈 여부 · 장애 여부]</b> 항목을 추가하면',
+   r:'지원서 하단에 <b>[민감정보 동의서]</b>가 자동으로 표시됩니다'},
+  {l:'채용 담당자가 개인정보 보호 설정에서 <b>[인재풀 활용 동의서]</b>를 켜면',
+   r:'지원서 하단에 <b>[인재풀 활용 동의서]</b>가 표시됩니다'},
+  {l:'채용 담당자가 개인정보 보호 설정에서 <b>[추가 동의서]</b>를 만들고 켜면',
+   r:'지원서 하단에 만든 <b>[추가 동의서]</b>가 표시됩니다'},
+];
+/* 왼쪽 목업의 시작점(sx,sy)과 오른쪽 목업의 도착 행 중심(ty). 좌표는 viewBox(460x340) 기준 */
+const LINK_PTS = [
+  [{sx:444, sy:124.5, ty:149}],
+  [{sx:444, sy:124.5, ty:181}],
+  [{sx:454, sy:164,   ty:213}, {sx:454, sy:200, ty:213}],
+  [{sx:426, sy:164.5, ty:245}],
+  [{sx:426, sy:201.5, ty:277}],
+];
+let stageStep = 0, stageTimer = null, stageAuto = true;
+
+function drawLinks(){
+  const body = document.getElementById('stageBody');
+  const shots = document.querySelectorAll('#stageBody .stage-shot');
+  const paths = [document.getElementById('lk0'), document.getElementById('lk1')];
+  if(!body || shots.length < 2) return;
+  const B = body.getBoundingClientRect();
+  const L = shots[0].getBoundingClientRect();
+  const R = shots[1].getBoundingClientRect();
+  const sL = L.width / 460, sR = R.width / 460;
+  /* 좁은 화면에서 위아래로 쌓이면 곡선을 그리지 않는다 (기하로 판정) */
+  const stacked = (R.top - L.top) > 8 || R.left <= L.left;
+  const defs = (stacked || !L.width) ? [] : LINK_PTS[stageStep];
+  paths.forEach((p, i) => {
+    const d = defs[i];
+    if(!d){ p.setAttribute('d', ''); return; }
+    const x0 = L.left - B.left + d.sx * sL;
+    const y0 = L.top  - B.top  + d.sy * sL;
+    const x1 = R.left - B.left + 46 * sR;
+    const y1 = R.top  - B.top  + d.ty * sR;
+    const dx = Math.max(20, Math.min((x1 - x0) * 0.45, 72));
+    p.setAttribute('d', 'M' + x0 + ' ' + y0 + ' C' + (x0 + dx) + ' ' + y0 + ' ' + (x1 - dx) + ' ' + y1 + ' ' + x1 + ' ' + y1);
+  });
+}
+
+function setStage(n, manual){
+  stageStep = n;
+  document.querySelectorAll('.stage-tab').forEach((b,i)=>{
+    b.classList.toggle('on', i===n); b.setAttribute('aria-selected', i===n ? 'true' : 'false');
+  });
+  document.querySelectorAll('.stage-scene').forEach((s,i)=>s.classList.toggle('on', i===n));
+  document.querySelectorAll('#sumStage .cRow').forEach((r,i)=>r.classList.toggle('on', i===n));
+  document.getElementById('sayL').innerHTML = STAGE[n].l;
+  document.getElementById('sayR').innerHTML = STAGE[n].r;
+  requestAnimationFrame(drawLinks);
+  /* 사용자가 직접 고르면 자동 진행을 멈춘다 */
+  if(manual){ stageAuto = false; clearTimeout(stageTimer); }
+}
+function stageTick(){
+  if(!stageAuto) return;
+  if(stageStep >= STAGE.length - 1){ stageAuto = false; return; }
+  setStage(stageStep + 1);
+  stageTimer = setTimeout(stageTick, 5100);
+}
+function stageReduced(){ return window.matchMedia('(prefers-reduced-motion:reduce)').matches; }
+/* 마우스를 올린 동안만 멈춘다 */
+function stagePause(){ clearTimeout(stageTimer); }
+function stageResume(){ if(stageAuto){ clearTimeout(stageTimer); stageTimer = setTimeout(stageTick, 1200); } }
+/* 한 번이라도 누르면 자동 진행을 완전히 끈다 */
+function stageStop(){ stageAuto = false; clearTimeout(stageTimer); }
+/* 처음으로 돌아가면 다시 처음부터 흐른다 */
+function restartStage(){
+  clearTimeout(stageTimer);
+  stageAuto = true;
+  setStage(0);
+  if(!stageReduced()) stageTimer = setTimeout(stageTick, 5100);
+}
+(function initStage(){
+  setStage(0);
+  window.addEventListener('resize', drawLinks);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(drawLinks);
+  setTimeout(drawLinks, 120);
+  document.querySelectorAll('#sumStage .stage-tab, #sumStage .stage-shot').forEach(el=>{
+    el.addEventListener('mouseenter', stagePause);
+    el.addEventListener('mouseleave', stageResume);
+    el.addEventListener('click', stageStop);
+  });
+  if(stageReduced()) return;
+  stageTimer = setTimeout(stageTick, 5100);
+})();
 let toastTimer;
 function toast(msg){
   const t = document.getElementById('toast');
