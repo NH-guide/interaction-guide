@@ -1969,8 +1969,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="sum-stage" id="sumStage">
         <div class="stage-tabs" role="tablist" aria-label="동의서 5종">
-          <button class="stage-tab on" type="button" role="tab" aria-selected="true"  onclick="setStage(0,1)">필수 항목 동의서</button>
-          <button class="stage-tab"    type="button" role="tab" aria-selected="false" onclick="setStage(1,1)">선택 항목 동의서</button>
+          <button class="stage-tab"    type="button" role="tab" aria-selected="false" onclick="setStage(0,1)">필수 항목 동의서</button>
+          <button class="stage-tab on" type="button" role="tab" aria-selected="true"  onclick="setStage(1,1)">선택 항목 동의서</button>
           <button class="stage-tab"    type="button" role="tab" aria-selected="false" onclick="setStage(2,1)">민감정보 동의서</button>
           <button class="stage-tab"    type="button" role="tab" aria-selected="false" onclick="setStage(3,1)">인재풀 활용 동의서</button>
           <button class="stage-tab"    type="button" role="tab" aria-selected="false" onclick="setStage(4,1)">추가 동의서</button>
@@ -1982,7 +1982,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="stage-say"><i>설정</i><span id="sayL"></span></p>
             <div class="stage-shot">
               <div class="shot-svg mock-frame" role="button" tabindex="0" aria-label="관리자 설정 화면 — 누르면 크게 볼 수 있습니다" onclick="zoomSvg(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();zoomSvg(this)}">
-                <svg class="stage-scene on" viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="지원서 편집 화면. 오른쪽 지원서 항목 설정 패널에서 필수 응답 토글이 켜져 있습니다.">
+                <svg class="stage-scene" viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="지원서 편집 화면. 오른쪽 지원서 항목 설정 패널에서 필수 응답 토글이 켜져 있습니다.">
                   <style>
                     text{font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,sans-serif}
                     .sEdge{shape-rendering:crispEdges}
@@ -2053,7 +2053,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <rect x="244" y="292" width="96" height="6" rx="3" fill="#ECEEF2"/>
                 </svg>
 
-                <svg class="stage-scene" viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="지원서 편집 화면. 오른쪽 지원서 항목 설정 패널에서 필수 응답 토글이 꺼져 있습니다.">
+                <svg class="stage-scene on" viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="지원서 편집 화면. 오른쪽 지원서 항목 설정 패널에서 필수 응답 토글이 꺼져 있습니다.">
                   <style>
                     text{font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,sans-serif}
                     .sEdge{shape-rendering:crispEdges}
@@ -2302,7 +2302,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="stage-say"><i>결과</i><span id="sayR"></span></p>
             <div class="stage-shot">
               <div class="shot-svg mock-frame" role="button" tabindex="0" aria-label="지원자가 보는 지원서 — 누르면 크게 볼 수 있습니다" onclick="zoomSvg(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();zoomSvg(this)}">
-                <svg viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="지원자가 보는 지원서. 동의 항목 네 가지가 있고 필수 항목 동의서 자리는 비어 있습니다.">
+                <svg viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" aria-label="지원자가 보는 지원서. 선택 항목 단계에서는 동의서가 펼쳐져 나인컴퍼니가 수집하는 포트폴리오 항목까지 표시됩니다.">
                   <style>
                     text{font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,sans-serif}
                     .pEdge{shape-rendering:crispEdges}
@@ -2310,13 +2310,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     .pSec{font-size:10px;font-weight:700;fill:#737887}
                     .pTxt{font-size:10.5px;font-weight:400;fill:#1F2430}
                     .pGhost{font-size:10.5px;font-weight:400;fill:#6E7382}
+                    .pCopy{font-size:9.2px;font-weight:400;fill:#5A6172}
+                    .pAccent{font-size:9.2px;font-weight:700;fill:#664FFF}
                     .pBdg{font-size:8px;font-weight:700}
                     .pBtn{font-size:10.5px;font-weight:700;fill:#FFFFFF}
                     .cRow{opacity:.45;transition:opacity .3s ease}
                     .cRow.on{opacity:1}
                     .cRing{opacity:0;transition:opacity .3s ease}
                     .cRow.on .cRing{opacity:1}
-                    @media(prefers-reduced-motion:reduce){.cRow,.cRing{transition:none}}
+                    .cOptionalOpen{opacity:0}
+                    .cOptionalOpen,.cOptionalClosed{transition:opacity .2s ease}
+                    .cOptional.on .cOptionalClosed{opacity:0}
+                    .cOptional.on .cOptionalOpen{opacity:1}
+                    .cOptional.on~.cRow{opacity:0;visibility:hidden}
+                    @media(prefers-reduced-motion:reduce){.cRow,.cRing,.cOptionalOpen,.cOptionalClosed{transition:none}}
                   </style>
                   <rect width="460" height="340" fill="#EEF0F4"/>
                   <rect x="26" y="0" width="408" height="340" fill="#FFFFFF"/>
@@ -2329,16 +2336,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <line x1="50" y1="106" x2="410" y2="106" stroke="#EDEEF3" class="pEdge"/>
                   <text x="50" y="124" class="pSec">개인정보 수집 및 이용 동의</text>
 
-                  <g class="cRow on">
-                    <rect class="cRing" x="44" y="131" width="372" height="36" rx="10" fill="none" stroke="#C9CAFF" stroke-width="5"/>
-                    <rect x="50" y="136" width="360" height="26" rx="7" fill="#F4F4F7" stroke="#CDD0D8" stroke-dasharray="4 3"/>
-                    <text x="66" y="153" class="pGhost">필수 항목 동의서는 표시되지 않습니다</text>
+                  <g class="cRow"></g>
+                  <g class="cRow cOptional on">
+                    <rect class="cRing" x="44" y="131" width="372" height="124" rx="10" fill="none" stroke="#C9CAFF" stroke-width="5"/>
+                    <g class="cOptionalClosed">
+                      <rect x="50" y="136" width="360" height="26" rx="7" fill="#FFFFFF" stroke="#DDDDE9"/>
+                      <rect x="62" y="143.5" width="11" height="11" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
+                      <text x="80" y="153" class="pTxt">선택 항목 수집 및 이용에 동의합니다</text>
+                      <rect x="330" y="141.5" width="32" height="15" rx="7.5" fill="#F0F1F5"/>
+                      <text x="346" y="152.3" text-anchor="middle" class="pBdg" fill="#737887">선택</text>
+                      <path d="M378 146.5l3.5 3.5 3.5-3.5" fill="none" stroke="#8A8F98" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <g class="cOptionalOpen">
+                      <rect x="50" y="136" width="360" height="114" rx="7" fill="#FFFFFF" stroke="#DDDDE9"/>
+                      <rect x="62" y="145.5" width="11" height="11" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
+                      <text x="80" y="155" class="pTxt">선택 항목 수집 및 이용에 동의합니다</text>
+                      <rect x="330" y="143.5" width="32" height="15" rx="7.5" fill="#F0F1F5"/>
+                      <text x="346" y="154.3" text-anchor="middle" class="pBdg" fill="#737887">선택</text>
+                      <path d="M378 153.5l3.5-3.5 3.5 3.5" fill="none" stroke="#8A8F98" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                      <line x1="62" y1="168.5" x2="398" y2="168.5" stroke="#F0F1F7" class="pEdge"/>
+                      <text x="64" y="188" class="pCopy">나인컴퍼니는 아래와 같이 선택 항목을 수집 및 이용합니다.</text>
+                      <text x="64" y="211" class="pCopy">수집 및 이용목적: 채용을 위한 평가</text>
+                      <text x="64" y="234" class="pCopy">수집하는 개인정보 항목: <tspan class="pAccent">포트폴리오</tspan></text>
+                    </g>
                   </g>
                   <g class="cRow">
                     <rect class="cRing" x="44" y="163" width="372" height="36" rx="10" fill="none" stroke="#C9CAFF" stroke-width="5"/>
                     <rect x="50" y="168" width="360" height="26" rx="7" fill="#FFFFFF" stroke="#DDDDE9"/>
                     <rect x="62" y="175.5" width="11" height="11" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
-                    <text x="80" y="185" class="pTxt">선택 항목 수집 및 이용에 동의합니다</text>
+                    <text x="80" y="185" class="pTxt">민감정보 수집 및 이용에 동의합니다</text>
                     <rect x="330" y="173.5" width="32" height="15" rx="7.5" fill="#F0F1F5"/>
                     <text x="346" y="184.3" text-anchor="middle" class="pBdg" fill="#737887">선택</text>
                     <path d="M378 178.5l3.5 3.5 3.5-3.5" fill="none" stroke="#8A8F98" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -2347,7 +2373,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <rect class="cRing" x="44" y="195" width="372" height="36" rx="10" fill="none" stroke="#C9CAFF" stroke-width="5"/>
                     <rect x="50" y="200" width="360" height="26" rx="7" fill="#FFFFFF" stroke="#DDDDE9"/>
                     <rect x="62" y="207.5" width="11" height="11" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
-                    <text x="80" y="217" class="pTxt">민감정보 수집 및 이용에 동의합니다</text>
+                    <text x="80" y="217" class="pTxt">인재풀 활용에 동의합니다</text>
                     <rect x="330" y="205.5" width="32" height="15" rx="7.5" fill="#F0F1F5"/>
                     <text x="346" y="216.3" text-anchor="middle" class="pBdg" fill="#737887">선택</text>
                     <path d="M378 210.5l3.5 3.5 3.5-3.5" fill="none" stroke="#8A8F98" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -2356,22 +2382,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <rect class="cRing" x="44" y="227" width="372" height="36" rx="10" fill="none" stroke="#C9CAFF" stroke-width="5"/>
                     <rect x="50" y="232" width="360" height="26" rx="7" fill="#FFFFFF" stroke="#DDDDE9"/>
                     <rect x="62" y="239.5" width="11" height="11" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
-                    <text x="80" y="249" class="pTxt">인재풀 활용에 동의합니다</text>
-                    <rect x="330" y="237.5" width="32" height="15" rx="7.5" fill="#F0F1F5"/>
-                    <text x="346" y="248.3" text-anchor="middle" class="pBdg" fill="#737887">선택</text>
+                    <text x="80" y="249" class="pTxt">제3자 제공에 동의합니다</text>
+                    <rect x="330" y="237.5" width="32" height="15" rx="7.5" fill="#FDEAEA"/>
+                    <text x="346" y="248.3" text-anchor="middle" class="pBdg" fill="#D33333">필수</text>
                     <path d="M378 242.5l3.5 3.5 3.5-3.5" fill="none" stroke="#8A8F98" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                   </g>
-                  <g class="cRow">
-                    <rect class="cRing" x="44" y="259" width="372" height="36" rx="10" fill="none" stroke="#C9CAFF" stroke-width="5"/>
-                    <rect x="50" y="264" width="360" height="26" rx="7" fill="#FFFFFF" stroke="#DDDDE9"/>
-                    <rect x="62" y="271.5" width="11" height="11" rx="3" fill="#FFFFFF" stroke="#B8BBC6"/>
-                    <text x="80" y="281" class="pTxt">제3자 제공에 동의합니다</text>
-                    <rect x="330" y="269.5" width="32" height="15" rx="7.5" fill="#FDEAEA"/>
-                    <text x="346" y="280.3" text-anchor="middle" class="pBdg" fill="#D33333">필수</text>
-                    <path d="M378 274.5l3.5 3.5 3.5-3.5" fill="none" stroke="#8A8F98" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                  </g>
-                  <rect x="50" y="302" width="360" height="28" rx="8" fill="#E89490"/>
-                  <text x="230" y="320.5" text-anchor="middle" class="pBtn">지원서 제출하기</text>
+                  <rect x="50" y="270" width="360" height="28" rx="8" fill="#E89490"/>
+                  <text x="230" y="288.5" text-anchor="middle" class="pBtn">지원서 제출하기</text>
                 </svg>
               </div>
             </div>
@@ -2540,7 +2557,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <figure>
         <div class="shot-svg mock-frame" role="button" tabindex="0" aria-label="지원서 편집 화면 애니메이션 — 누르면 크게 볼 수 있습니다" onclick="zoomSvg(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();zoomSvg(this)}">
-          <svg viewBox="0 0 1275 750" xmlns="http://www.w3.org/2000/svg" aria-label="지원서 편집 화면에서 필수 응답을 켜면 선택 항목 수집 동의서가 사라지고, 끄면 같은 자리에 다시 나타나 강조되는 애니메이션">
+          <svg viewBox="0 0 1275 750" xmlns="http://www.w3.org/2000/svg" aria-label="지원서 편집 화면에서 필수 응답을 끄면 선택 항목 동의서가 펼쳐지고 수집하는 개인정보 항목에 경력사항이 표시되는 애니메이션">
             <style>
               .cs12-header-line,.cs12-panel-line,.cs12-row-line{shape-rendering:crispEdges}
               .cs12-title{font-size:15px;font-weight:700;fill:#1F2430}
@@ -2550,21 +2567,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               .cs12-body-strong{font-size:13px;font-weight:700;fill:#1F2430}
               .cs12-card-title{font-size:14px;font-weight:700;fill:#1F2430}
               .cs12-consent{font-size:13.5px;font-weight:400;fill:#1F2430}
+              .cs12-consent-copy{font-size:12.3px;font-weight:400;fill:#5A6172}
+              .cs12-consent-accent{font-size:12.3px;font-weight:700;fill:#664FFF}
               .cs12-button{font-size:13px;font-weight:700}
               .cs12-badge{font-size:10.5px;font-weight:700;fill:#737887}
               .cs12-dummy{fill:#ECEEF2}
-              .cs12-toggle-on{animation:cs12-toggle-track 4.08s linear infinite}
-              .cs12-toggle-knob{animation:cs12-toggle-knob 4.08s linear infinite}
-              .cs12-consent-a{transform-box:view-box;transform-origin:451px 614px;animation:cs12-consent-a 4.08s linear infinite}
-              .cs12-appear-ring{opacity:0;transform-box:view-box;transform-origin:451px 614px;animation:cs12-appear-ring 4.08s linear infinite}
+              .cs12-toggle-on{animation:cs12-toggle-track 4.98s linear infinite}
+              .cs12-toggle-knob{animation:cs12-toggle-knob 4.98s linear infinite}
+              .cs12-consent-a{transform-box:view-box;transform-origin:451px 542px;animation:cs12-consent-a 4.98s linear infinite}
+              .cs12-appear-ring{opacity:0;transform-box:view-box;transform-origin:451px 542px;animation:cs12-appear-ring 4.98s linear infinite}
               @keyframes cs12-toggle-track{
-                0%{opacity:1}6.13%,50%{opacity:0}56.13%,100%{opacity:1}
+                0%{opacity:1}5.02%,59%{opacity:0}64.02%,100%{opacity:1}
               }
               @keyframes cs12-toggle-knob{
-                0%{transform:translateX(24px)}6.13%,50%{transform:translateX(0)}56.13%,100%{transform:translateX(24px)}
+                0%{transform:translateX(24px)}5.02%,59%{transform:translateX(0)}64.02%,100%{transform:translateX(24px)}
               }
-              @keyframes cs12-consent-a{0%{opacity:0;transform:scaleY(.15)}6.13%{opacity:1;transform:scale(1.04)}10.54%,50%{opacity:1;transform:scale(1)}56.13%,100%{opacity:0;transform:scaleY(.15)}}
-              @keyframes cs12-appear-ring{0%{opacity:0;transform:scale(1)}6.13%{opacity:1;transform:scale(1.02)}12.25%{opacity:1;transform:scale(1)}29.41%,100%{opacity:0;transform:scale(1)}}                          
+              @keyframes cs12-consent-a{0%{opacity:0;transform:scaleY(.15)}5.02%{opacity:1;transform:scale(1.015)}8.63%,59%{opacity:1;transform:scale(1)}64.02%,100%{opacity:0;transform:scaleY(.15)}}
+              @keyframes cs12-appear-ring{0%{opacity:0;transform:scale(1)}5.02%{opacity:1;transform:scale(1.02)}10.04%{opacity:1;transform:scale(1)}24.1%,100%{opacity:0;transform:scale(1)}}                          
               @media(prefers-reduced-motion:reduce){
                 .cs12-toggle-on,.cs12-toggle-knob,.cs12-consent-a,.cs12-appear-ring{animation:none}
                 .cs12-toggle-on{opacity:0}.cs12-toggle-knob{transform:translateX(0)}.cs12-consent-a{opacity:1;transform:scaleY(1)}.cs12-appear-ring{opacity:1;transform:scale(1)}
@@ -2599,10 +2618,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <circle cx="31" cy="91" r="17" fill="#EDEDF2"/>
             <path d="M31 84v14M24 91h14" stroke="#4B4DE1" stroke-width="2" stroke-linecap="round"/>
 
-            <!-- 중앙 폼 캔버스 -->
-            <rect x="102" y="110" width="698" height="44" rx="8" fill="#FFFFFF" stroke="#DDDDE9"/>
-            <rect x="122" y="128" width="185" height="8" rx="4" class="cs12-dummy"/>
-
+            <!-- 중앙 폼 캔버스 · 상단 더미 항목을 제거하고 아래 구성을 48px 위로 이동 -->
+            <g transform="translate(0 -48)">
             <rect x="102" y="174" width="698" height="302" rx="10" fill="#FFFFFF" stroke="#8F91EA" stroke-width="1.5"/>
             <text x="126" y="205" class="cs12-card-title">경력사항</text>
             <rect x="690" y="188.5" width="18" height="18" rx="4" fill="#FFFFFF" stroke="#C9CBD5"/>
@@ -2627,17 +2644,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <rect x="102" y="496" width="698" height="40" rx="8" fill="#FAFAFB" stroke="#D5D7E0" stroke-dasharray="5 4"/>
             <text x="451" y="521" text-anchor="middle" font-size="12.5px" font-weight="400" fill="#737887">+ 지원서 항목 추가</text>
             <line x1="102" y1="558.5" x2="800" y2="558.5" stroke="#E5E5EF" class="cs12-row-line"/>
+            </g>
 
             <!-- 동의서 영역 -->
             <g class="cs12-consent-a">
-              <rect x="102" y="590" width="698" height="48" rx="8" fill="#FFFFFF" stroke="#DDDDE9"/>
-              <rect x="122" y="606" width="18" height="18" rx="4" fill="#FFFFFF" stroke="#B8BBC6"/>
-              <text x="152" y="620" class="cs12-consent">선택 항목 수집 및 이용에 동의합니다.</text>
-              <rect x="358.6" y="603" width="39" height="22" rx="11" fill="#F0F1F5"/>
-              <text x="378.1" y="618" text-anchor="middle" class="cs12-badge">선택</text>
-              <path d="M765 610l5 5 5-5" fill="none" stroke="#8A8F98" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="102" y="542" width="698" height="144" rx="8" fill="#FFFFFF" stroke="#DDDDE9"/>
+              <rect x="122" y="558" width="18" height="18" rx="4" fill="#FFFFFF" stroke="#B8BBC6"/>
+              <text x="152" y="572" class="cs12-consent">선택 항목 수집 및 이용에 동의합니다.</text>
+              <rect x="358.6" y="555" width="39" height="22" rx="11" fill="#F0F1F5"/>
+              <text x="378.1" y="570" text-anchor="middle" class="cs12-badge">선택</text>
+              <path d="M765 571l5-5 5 5" fill="none" stroke="#8A8F98" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="122" y1="590.5" x2="780" y2="590.5" stroke="#F0F1F7" class="cs12-row-line"/>
+              <text x="126" y="615" class="cs12-consent-copy">나인컴퍼니는 아래와 같이 선택 항목을 수집 및 이용합니다.</text>
+              <text x="126" y="641" class="cs12-consent-copy">수집 및 이용목적: 채용을 위한 평가</text>
+              <text x="126" y="667" class="cs12-consent-copy">수집하는 개인정보 항목: <tspan class="cs12-consent-accent">경력사항</tspan></text>
             </g>
-            <rect x="94" y="582" width="714" height="64" rx="14" fill="none" stroke="#C9CAFF" stroke-width="8" class="cs12-appear-ring"/>
+            <rect x="94" y="534" width="714" height="160" rx="14" fill="none" stroke="#C9CAFF" stroke-width="8" class="cs12-appear-ring"/>
 
             <!-- 우측 설정 패널 -->
             <rect x="840" y="58" width="435" height="692" fill="#FFFFFF"/>
@@ -2674,7 +2696,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <rect x="874" y="425" width="246" height="8" rx="4" class="cs12-dummy"/>
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </svg>
-          <p class="mock-cap">지원서의 모든 항목이 <b>[필수 응답]</b>으로 설정되면 <b>[선택 항목 동의서]</b>는 표시되지 않습니다</p>
+          <p class="mock-cap">지원서 항목의 <b>[필수 응답]</b> 설정을 끄면 해당 항목은 <b>[선택 응답]</b> 항목이 되며, <b>[선택 항목 동의서]</b>의 수집 항목으로 표시됩니다</p>
         </div>
       </figure>
 
@@ -4147,13 +4169,13 @@ const STAGE = [
 ];
 /* 왼쪽 목업의 시작점(sx,sy)과 오른쪽 목업의 도착 행 중심(ty). 좌표는 viewBox(460x340) 기준 */
 const LINK_PTS = [
+  [],
   [{sx:444, sy:124.5, ty:149}],
-  [{sx:444, sy:124.5, ty:181}],
-  [{sx:454, sy:164,   ty:213}, {sx:454, sy:200, ty:213}],
-  [{sx:426, sy:164.5, ty:245}],
-  [{sx:426, sy:201.5, ty:277}],
+  [{sx:454, sy:164,   ty:181}, {sx:454, sy:200, ty:181}],
+  [{sx:426, sy:164.5, ty:213}],
+  [{sx:426, sy:201.5, ty:245}],
 ];
-let stageStep = 0, stageTimer = null, stageAuto = true;
+let stageStep = 1, stageTimer = null, stageAuto = true;
 
 function drawLinks(){
   const body = document.getElementById('stageBody');
@@ -4227,11 +4249,11 @@ function stageStop(){ stageAuto = false; clearTimeout(stageTimer); }
 function restartStage(){
   clearTimeout(stageTimer);
   stageAuto = true;
-  setStage(0);
+  setStage(1);
   if(!stageReduced()) stageTimer = setTimeout(stageTick, 5100);
 }
 (function initStage(){
-  setStage(0);
+  setStage(1);
   window.addEventListener('resize', queueStageSaySync);
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(queueStageSaySync);
   setTimeout(queueStageSaySync, 120);
