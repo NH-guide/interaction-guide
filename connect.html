@@ -2283,7 +2283,7 @@
       .intro-primary, .intro-secondary { width: 100%; justify-content: center; }
     }
 
-    /* v1.1 · 기준 가이드와 첫 채용 만들기 색감 통일 */
+    /* v1.1 · 기준 가이드와 첫 포지션 만들기 색감 통일 */
     body { background: var(--canvas); }
     .app-header { background: rgba(250, 250, 251, .96); }
     .brand { color: var(--purple-700); }
@@ -2630,7 +2630,7 @@
       background: #eeebff;
     }
 
-    /* 첫 화면 이후에는 채용 만들기 가이드처럼 진행 순서를 함께 표시 */
+    /* 첫 화면 이후에는 포지션 만들기 가이드처럼 진행 순서를 함께 표시 */
     .guide-layout {
       display: grid;
       grid-template-columns: 250px minmax(0, 1fr);
@@ -4086,8 +4086,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ol class="sidebar-steps">
           <li><button class="sidebar-step is-current" type="button" data-flow-stage="install" data-process-target="install" aria-current="step"><span class="sidebar-step-num">1</span><span class="sidebar-step-copy"><strong>설치·실행</strong><small>커넥트 사용 준비</small></span></button></li>
           <li><button class="sidebar-step" type="button" data-flow-stage="account" data-process-target="account"><span class="sidebar-step-num">2</span><span class="sidebar-step-copy"><strong>계정 연결</strong><small>채용 플랫폼 계정 등록</small></span></button></li>
-          <li><button class="sidebar-step" type="button" data-flow-stage="job" data-process-target="job"><span class="sidebar-step-num">3</span><span class="sidebar-step-copy"><strong>공고 연결</strong><small>나인하이어 채용과 외부 공고 연결</small></span></button></li>
-          <li><button class="sidebar-step" type="button" data-flow-stage="collect" data-process-target="collect"><span class="sidebar-step-num">4</span><span class="sidebar-step-copy"><strong>지원자 수집</strong><small>기간과 채용 선택</small></span></button></li>
+          <li><button class="sidebar-step" type="button" data-flow-stage="job" data-process-target="job"><span class="sidebar-step-num">3</span><span class="sidebar-step-copy"><strong>공고 연결</strong><small>나인하이어 포지션과 외부 공고 연결</small></span></button></li>
+          <li><button class="sidebar-step" type="button" data-flow-stage="collect" data-process-target="collect"><span class="sidebar-step-num">4</span><span class="sidebar-step-copy"><strong>지원자 수집</strong><small>기간과 포지션 선택</small></span></button></li>
           <li><button class="sidebar-step" type="button" data-flow-stage="register" data-process-target="register"><span class="sidebar-step-num">5</span><span class="sidebar-step-copy"><strong>수집 지원자 확인·등록</strong><small>지원자 검토 후 등록</small></span></button></li>
         </ol>
       </aside>
@@ -4100,7 +4100,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <h1 id="step1Title" tabindex="-1"><span class="title-line">채용 플랫폼의 지원자들,</span><span class="title-line">커넥트를 통해 나인하이어로</span></h1>
               <p class="lead"><span class="lead-line">각 채용 플랫폼에 <strong>흩어져 있는 지원자를 나인하이어에 등록</strong>해서</span><span class="lead-line">한번에 관리하고 싶다면, <strong class="connect-name">나인하이어 커넥트</strong>를 사용하세요.</span></p>
 
-              <div class="connect-visual" role="img" aria-label="채용 플랫폼의 지원자를 커넥트로 불러와 나인하이어 채용에 등록하는 흐름">
+              <div class="connect-visual" role="img" aria-label="채용 플랫폼의 지원자를 커넥트로 불러와 나인하이어 포지션에 등록하는 흐름">
                 <svg class="connect-flow2" viewBox="0 0 720 517.88" role="img" aria-label="잡코리아·사람인·원티드·원픽·알바몬·게임잡의 지원자를 커넥트가 한 번에 수집해 나인하이어에 등록하는 흐름도">
                   <defs>
                     <marker id="cf2-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M1 1l5 2.5L1 6z" fill="#9F90FF"/></marker>
@@ -4147,12 +4147,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </li>
                 <li class="connect-action-item">
                   <span class="connect-action-num" aria-hidden="true">2</span>
-                  <span class="connect-action-copy"><strong>계정·공고 연결</strong><span>채용 플랫폼 계정을 나인하이어 커넥트에 연결하고, 나인하이어 채용과 플랫폼 공고를 연결해 둡니다.</span></span>
+                  <span class="connect-action-copy"><strong>계정·공고 연결</strong><span>채용 플랫폼 계정을 나인하이어 커넥트에 연결하고, 나인하이어 포지션과 플랫폼 공고를 연결해 둡니다.</span></span>
                   <span class="connect-action-state">신규 공고 추가 시</span>
                 </li>
                 <li class="connect-action-item">
                   <span class="connect-action-num" aria-hidden="true">3</span>
-                  <span class="connect-action-copy"><strong>지원자 수집, 등록</strong><span>채용 플랫폼에 접수된 지원자를 수집하고 나인하이어 채용에 등록합니다.</span></span>
+                  <span class="connect-action-copy"><strong>지원자 수집, 등록</strong><span>채용 플랫폼에 접수된 지원자를 수집하고 나인하이어 포지션에 등록합니다.</span></span>
                   <span class="connect-action-state">매일/일상적 반복</span>
                 </li>
               </ol>
@@ -4214,7 +4214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <header class="section-heading">
             <p class="eyebrow">STEP 4</p>
             <h2 id="step3Title" tabindex="-1"><span class="title-line">각 플랫폼의 지원자 정보를 수집해요</span></h2>
-            <p class="lead">나인하이어 채용과 연결해 둔 플랫폼의 공고들에 접수된 지원자 정보를 수집해요. 보통 매일 혹은 주기적으로 수집합니다.</p>
+            <p class="lead">나인하이어 포지션과 연결해 둔 플랫폼의 공고들에 접수된 지원자 정보를 수집해요. 보통 매일 혹은 주기적으로 수집합니다.</p>
           </header>
 
           <div class="demo-layout">
@@ -4222,7 +4222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <section class="demo-window is-embedded" data-video-slot="collect" aria-label="현재 지원자 수집 및 등록 단계 애니메이션">
               <div class="animation-route-bar">
                 <span class="animation-route-number" data-route-number aria-hidden="true">4</span>
-                <span class="animation-route-copy" data-route-copy aria-live="polite">설정 → 플랫폼 공고 연결 → 지원자 데이터 수집 → [작업 요청] → 채용·수집 범위 선택 → [작업 요청]</span>
+                <span class="animation-route-copy" data-route-copy aria-live="polite">설정 → 플랫폼 공고 연결 → 지원자 데이터 수집 → [작업 요청] → 포지션·수집 범위 선택 → [작업 요청]</span>
               </div>
               <div class="embedded-stage-viewport" data-animation-expand role="button" tabindex="0" aria-label="현재 지원자 수집 및 등록 애니메이션 크게 보기" title="클릭해서 크게 보기">
                 <iframe
@@ -4265,7 +4265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <ol class="prep-list">
                 <li class="prep-item"><span class="prep-num">1</span><span class="prep-copy"><strong>나인하이어 워크스페이스 관리자 권한 계정 준비</strong><span>나인하이어 커넥트는 워크스페이스 관리자만 로그인하고 사용할 수 있어요.</span></span></li>
                 <li class="prep-item"><span class="prep-num">2</span><span class="prep-copy"><strong>채용 플랫폼 아이디와 비밀번호</strong><span>소셜 로그인은 불가하니 직접 로그인할 수 있는 아이디와 비밀번호를 준비해 주세요.</span></span></li>
-                <li class="prep-item"><span class="prep-num">3</span><span class="prep-copy"><strong>연결할 나인하이어 채용</strong><span>외부 플랫폼 공고와 연결할 채용을 나인하이어에 미리 만들어 두세요.</span></span></li>
+                <li class="prep-item"><span class="prep-num">3</span><span class="prep-copy"><strong>연결할 나인하이어 포지션</strong><span>외부 플랫폼 공고와 연결할 포지션을 나인하이어에 미리 만들어 두세요.</span></span></li>
               </ol>
               <p class="os-line">Windows와 Mac 지원 · Mac은 Apple Silicon(M1 이상)</p>
             </section>
@@ -4880,9 +4880,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </head>
 <body>
   <main class="nj-shell">
-    <header class="nj-header"><h1 class="nj-title">커넥트 플랫폼 공고 연결</h1><p class="nj-subtitle">나인하이어 채용에 여러 플랫폼의 공고를 한 번에 연결합니다</p></header>
+    <header class="nj-header"><h1 class="nj-title">커넥트 플랫폼 공고 연결</h1><p class="nj-subtitle">나인하이어 포지션에 여러 플랫폼의 공고를 한 번에 연결합니다</p></header>
     <div class="nj-svg-wrap">
-      <svg viewBox="0 0 1275 750" width="100%" role="img" aria-label="설정에서 나인하이어 채용을 선택하고 알바몬, 잡코리아, 사람인 공고를 연결하는 안내 애니메이션">
+      <svg viewBox="0 0 1275 750" width="100%" role="img" aria-label="설정에서 나인하이어 포지션을 선택하고 알바몬, 잡코리아, 사람인 공고를 연결하는 안내 애니메이션">
         <defs>
           <linearGradient id="nj-logo-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6750FF"/><stop offset="1" stop-color="#482EF8"/></linearGradient>
           <symbol id="nj-logo" viewBox="0 0 832 832"><rect width="832" height="832" rx="190" fill="url(#nj-logo-grad)"/><path d="M324 183 H451 V326 L546 183 H672 V393 L509 641 H381 V501 L286 641 H160 V435 Z" fill="#FFF"/></symbol>
@@ -4925,22 +4925,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <rect y="96" width="1275" height="654" fill="#FFF"/><text x="40" y="151" fill="#1F2430" font-size="19" font-weight="750">플랫폼 공고 연결</text><text x="203" y="151" fill="#969CA8" font-size="19">0</text>
           <rect x="843" y="123" width="218" height="42" rx="6" fill="#FFF" stroke="#D4D7DF"/><use href="#nj-search" x="858" y="136"/><rect x="889" y="138" width="118" height="10" rx="5" fill="#D9DCE2"/>
           <rect x="1077" y="123" width="158" height="42" rx="6" fill="#4B4DE1"/><text x="1156" y="149.18" text-anchor="middle" fill="#FFF" font-size="14" font-weight="700">연결 생성하기</text>
-          <rect x="40" y="188" width="1195" height="48" fill="#FAFAFB"/><path d="M40 188h1195M40 236h1195" stroke="#E5E7EC"/><text x="64" y="218" fill="#5A6172" font-size="13.5">나인하이어 채용명</text><text x="430" y="218" fill="#5A6172" font-size="13.5">연결된 플랫폼 공고</text><text x="765" y="218" fill="#5A6172" font-size="13.5">업데이트일</text><text x="970" y="218" fill="#5A6172" font-size="13.5">업데이트한 사람</text><text x="637.5" y="424" text-anchor="middle" fill="#8A909D" font-size="15">생성된 연결이 없습니다.</text>
+          <rect x="40" y="188" width="1195" height="48" fill="#FAFAFB"/><path d="M40 188h1195M40 236h1195" stroke="#E5E7EC"/><text x="64" y="218" fill="#5A6172" font-size="13.5">나인하이어 포지션명</text><text x="430" y="218" fill="#5A6172" font-size="13.5">연결된 플랫폼 공고</text><text x="765" y="218" fill="#5A6172" font-size="13.5">업데이트일</text><text x="970" y="218" fill="#5A6172" font-size="13.5">업데이트한 사람</text><text x="637.5" y="424" text-anchor="middle" fill="#8A909D" font-size="15">생성된 연결이 없습니다.</text>
         </g>
         <!-- L4 · 연결 생성 모달 초기 -->
         <g class="nj-step3">
           <rect width="1275" height="750" fill="rgba(31,36,48,.32)"/>
           <g filter="url(#nj-modal-shadow)">
             <rect x="110" y="60" width="1055" height="640" rx="10" fill="#FFF"/><text x="134" y="92" fill="#1F2430" font-size="16" font-weight="750">연결 생성하기</text><path d="M110 110h1055M460 110v530M110 640h1055" stroke="#EEF0F3"/>
-            <text x="130" y="142" fill="#9298A5" font-size="11.5" font-weight="700">Step 01</text><text x="183" y="142" fill="#1F2430" font-size="13" font-weight="750">연결할 나인하이어 채용 선택</text>
-            <rect x="130" y="160" width="205" height="36" rx="6" fill="#FFF" stroke="#D4D7DF"/><use href="#nj-search" x="143" y="170"/><text x="171" y="183" fill="#969CA8" font-size="12.5">채용명 검색</text><text x="348" y="183" fill="#5A6172" font-size="12">진행중</text><rect x="395" y="169" width="38" height="20" rx="10" fill="#4B4DE1"/><circle cx="423" cy="179" r="7" fill="#FFF"/>
+            <text x="130" y="142" fill="#9298A5" font-size="11.5" font-weight="700">Step 01</text><text x="183" y="142" fill="#1F2430" font-size="13" font-weight="750">연결할 나인하이어 포지션 선택</text>
+            <rect x="130" y="160" width="205" height="36" rx="6" fill="#FFF" stroke="#D4D7DF"/><use href="#nj-search" x="143" y="170"/><text x="171" y="183" fill="#969CA8" font-size="12.5">포지션명 검색</text><text x="348" y="183" fill="#5A6172" font-size="12">진행중</text><rect x="395" y="169" width="38" height="20" rx="10" fill="#4B4DE1"/><circle cx="423" cy="179" r="7" fill="#FFF"/>
             <rect x="130" y="215" width="310" height="42" rx="8" fill="#FFF" stroke="#E6E8EE"/><circle cx="147" cy="236" r="6.5" fill="#FFF" stroke="#4B4DE1" stroke-width="1.5"/><text x="164" y="240.81" fill="#1F2430" font-size="13">백엔드 개발자 채용</text>            <rect x="130" y="267" width="310" height="42" rx="8" fill="#FFF" stroke="#E6E8EE"/><circle cx="147" cy="288" r="6.5" fill="#FFF" stroke="#4B4DE1" stroke-width="1.5"/><text x="164" y="292.81" fill="#1F2430" font-size="13">프론트엔드 개발자 채용</text>            <rect x="130" y="319" width="310" height="42" rx="8" fill="#FFF" stroke="#E6E8EE"/><circle cx="147" cy="340" r="6.5" fill="#FFF" stroke="#4B4DE1" stroke-width="1.5"/><text x="164" y="344.81" fill="#1F2430" font-size="13">디자이너 채용</text>            <rect x="130" y="371" width="310" height="42" rx="8" fill="#FFF" stroke="#E6E8EE"/><circle cx="147" cy="392" r="6.5" fill="#FFF" stroke="#4B4DE1" stroke-width="1.5"/><text x="164" y="396.81" fill="#1F2430" font-size="12.2">[샘플] 채용솔루션 UI/UX디자이너 모집</text>
-            <text x="812.5" y="338" text-anchor="middle" fill="#B2B6C0" font-size="29">←</text><text x="812.5" y="378" text-anchor="middle" fill="#8A909D" font-size="13.5">연결을 생성할</text><text x="812.5" y="399" text-anchor="middle" fill="#8A909D" font-size="13.5">나인하이어 채용을 선택해 주세요.</text>
+            <text x="812.5" y="338" text-anchor="middle" fill="#B2B6C0" font-size="29">←</text><text x="812.5" y="378" text-anchor="middle" fill="#8A909D" font-size="13.5">연결을 생성할</text><text x="812.5" y="399" text-anchor="middle" fill="#8A909D" font-size="13.5">나인하이어 포지션을 선택해 주세요.</text>
             <text x="962" y="677.18" text-anchor="middle" fill="#5A6172" font-size="14">취소</text><g class="nj-button-disabled"><rect x="994" y="652" width="146" height="38" rx="6" fill="#B9BAF5"/><text x="1067" y="676.18" text-anchor="middle" fill="#FFF" font-size="14" font-weight="700">공고 연결하기</text></g>
           </g>
         </g>
 
-        <!-- L5 · 채용 선택과 Step 02 -->
+        <!-- L5 · 포지션 선택과 Step 02 -->
         <g class="nj-step4">
           <rect x="127" y="212" width="316" height="48" rx="10" fill="#FFF"/><rect x="130" y="215" width="310" height="42" rx="8" fill="#F7F7FF" stroke="#4B4DE1" stroke-width="1.6"/><circle cx="147" cy="236" r="7" fill="#4B4DE1"/><circle cx="147" cy="236" r="2.5" fill="#FFF"/><text x="164" y="240.81" fill="#1F2430" font-size="13" font-weight="650">백엔드 개발자 채용</text>
           <rect x="461" y="111" width="703" height="528" fill="#FFF"/>
@@ -4993,7 +4993,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <g class="nj-step9">
           <rect y="96" width="1275" height="654" fill="#FFF"/><text x="40" y="151" fill="#1F2430" font-size="19" font-weight="750">플랫폼 공고 연결</text><text x="203" y="151" fill="#969CA8" font-size="19">1</text>
           <rect x="843" y="123" width="218" height="42" rx="6" fill="#FFF" stroke="#D4D7DF"/><use href="#nj-search" x="858" y="136"/><rect x="889" y="138" width="118" height="10" rx="5" fill="#D9DCE2"/><rect x="1077" y="123" width="158" height="42" rx="6" fill="#4B4DE1"/><text x="1156" y="149.18" text-anchor="middle" fill="#FFF" font-size="14" font-weight="700">연결 생성하기</text>
-          <rect x="40" y="188" width="1195" height="48" fill="#FAFAFB"/><path d="M40 188h1195M40 236h1195" stroke="#E5E7EC"/><text x="64" y="218" fill="#5A6172" font-size="13.5">나인하이어 채용명</text><text x="430" y="218" fill="#5A6172" font-size="13.5">연결된 플랫폼 공고</text><text x="765" y="218" fill="#5A6172" font-size="13.5">업데이트일</text><text x="970" y="218" fill="#5A6172" font-size="13.5">업데이트한 사람</text>
+          <rect x="40" y="188" width="1195" height="48" fill="#FAFAFB"/><path d="M40 188h1195M40 236h1195" stroke="#E5E7EC"/><text x="64" y="218" fill="#5A6172" font-size="13.5">나인하이어 포지션명</text><text x="430" y="218" fill="#5A6172" font-size="13.5">연결된 플랫폼 공고</text><text x="765" y="218" fill="#5A6172" font-size="13.5">업데이트일</text><text x="970" y="218" fill="#5A6172" font-size="13.5">업데이트한 사람</text>
           <rect x="40" y="236" width="1195" height="68" fill="#FFF"/><path d="M40 304h1195" stroke="#EEF0F3"/><text x="64" y="274.81" fill="#1F2430" font-size="13" font-weight="650">백엔드 개발자 채용</text><rect x="430" y="255" width="68" height="30" rx="15" fill="#FFF" stroke="#D9DCE3"/><use href="#nj-share" x="444" y="260"/><text x="478" y="274.63" text-anchor="middle" fill="#1F2430" font-size="12.5" font-weight="650">3</text><text x="765" y="274.81" fill="#1F2430" font-size="13">26/07/01</text><circle cx="987" cy="270" r="17" fill="#E9E9FE"/><text x="987" y="275.18" text-anchor="middle" fill="#4B4DE1" font-size="14" font-weight="750">김</text><text x="1015" y="274.81" fill="#1F2430" font-size="13">김지원</text>
           <g class="nj-toast" filter="url(#nj-toast-shadow)"><rect x="472" y="632" width="331" height="52" rx="8" fill="#FFF" stroke="#E6E8EE"/><circle cx="500" cy="658" r="12" fill="#22A06B"/><path d="m494 658 4 4 8-9" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="522" y="662.995" fill="#1F2430" font-size="13.5" font-weight="650">공고 연결이 생성되었습니다.</text></g>
         </g>
@@ -5046,10 +5046,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main class="nr-shell">
     <header class="nr-header">
       <h1 class="nr-title">커넥트 지원자 데이터 수집</h1>
-      <p class="nr-subtitle">지원자 데이터 수집 화면에서 채용을 선택해 수집 작업을 요청합니다</p>
+      <p class="nr-subtitle">지원자 데이터 수집 화면에서 포지션을 선택해 수집 작업을 요청합니다</p>
     </header>
     <div class="nr-svg-wrap">
-      <svg viewBox="0 0 1275 750" width="100%" role="img" aria-label="설정의 플랫폼 공고 연결에서 지원자 데이터 수집으로 이동해 채용을 선택하고 수집 작업을 요청하는 안내 애니메이션">
+      <svg viewBox="0 0 1275 750" width="100%" role="img" aria-label="설정의 플랫폼 공고 연결에서 지원자 데이터 수집으로 이동해 포지션을 선택하고 수집 작업을 요청하는 안내 애니메이션">
         <defs>
           <linearGradient id="nr-logoGrad" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stop-color="#6750FF"/><stop offset="1" stop-color="#482EF8"/>
@@ -5082,7 +5082,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <text x="425" y="123" fill="#5A6172" font-size="13">작업명</text>
             <rect x="425" y="132" width="425" height="40" rx="6" fill="#FFFFFF" stroke="#D4D7DF"/>
             <text x="441" y="157" fill="#1F2430" font-size="13.5">작업 (26/07/24 18:25)</text>
-            <text x="425" y="201" fill="#5A6172" font-size="13">요청할 채용</text>
+            <text x="425" y="201" fill="#5A6172" font-size="13">요청할 포지션</text>
             <text x="425" y="474" fill="#1F2430" font-size="13.5" font-weight="700">접수일 기준 수집 범위 (최대 30일)</text>
             <rect x="425" y="594" width="374" height="9" rx="4.5" fill="#E4E6EB"/>
             <rect x="425" y="613" width="196" height="9" rx="4.5" fill="#E4E6EB"/>
@@ -5090,7 +5090,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </g>
           <g id="nr-closedDropdown">
             <rect x="425" y="210" width="425" height="40" rx="6" fill="#FFFFFF" stroke="#D4D7DF"/>
-            <text x="441" y="235" fill="#969CA8" font-size="13.5">채용을 선택해 주세요</text>
+            <text x="441" y="235" fill="#969CA8" font-size="13.5">포지션을 선택해 주세요</text>
             <path d="m824 226 5 6 5-6" fill="none" stroke="#8F95A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </g>
           <g id="nr-rangeChips">
@@ -5197,7 +5197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <rect x="843" y="123" width="218" height="42" rx="6" fill="#FFFFFF" stroke="#D4D7DF"/><circle cx="866" cy="143" r="7" fill="none" stroke="#9096A3" stroke-width="1.6"/><path d="m871 148 6 6" stroke="#9096A3" stroke-width="1.6" stroke-linecap="round"/><rect x="892" y="138" width="118" height="10" rx="5" fill="#D9DCE2"/>
           <rect x="1077" y="123" width="158" height="42" rx="6" fill="#4B4DE1"/><text x="1156" y="149.15" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">연결 생성하기</text>
           <rect x="40" y="188" width="1195" height="48" fill="#FAFAFB"/><path d="M40 188h1195M40 236h1195" stroke="#E5E7EC"/>
-          <text x="64" y="218" fill="#5A6172" font-size="13.5">나인하이어 채용명</text><text x="408" y="218" fill="#5A6172" font-size="13.5">연결된 플랫폼 공고</text><text x="718" y="218" fill="#5A6172" font-size="13.5">업데이트일</text><text x="933" y="218" fill="#5A6172" font-size="13.5">업데이트한 사람</text>
+          <text x="64" y="218" fill="#5A6172" font-size="13.5">나인하이어 포지션명</text><text x="408" y="218" fill="#5A6172" font-size="13.5">연결된 플랫폼 공고</text><text x="718" y="218" fill="#5A6172" font-size="13.5">업데이트일</text><text x="933" y="218" fill="#5A6172" font-size="13.5">업데이트한 사람</text>
           <rect x="40" y="236" width="1195" height="68" fill="#FFFFFF"/><path d="M40 304h1195" stroke="#E5E7EC"/>
           <text x="64" y="277" fill="#1F2430" font-size="14" font-weight="650">백엔드 개발자 채용</text>
           <use href="#nr-share" x="410" y="261.9"/><text x="434" y="277" fill="#5A6172" font-size="14">3</text>
@@ -5222,7 +5222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <rect width="1275" height="750" fill="rgba(31,36,48,.32)"/>
           <g filter="url(#nr-modalShadow)">
             <use href="#nr-modalCommon"/><text x="506" y="201" fill="#969CA8" font-size="13">0</text><use href="#nr-closedDropdown"/>
-            <rect x="425" y="262" width="425" height="180" rx="6" fill="#FAFAFB" stroke="#EDEEF2"/><text x="637.5" y="357" text-anchor="middle" fill="#8A909D" font-size="13">선택된 채용이 없습니다.</text>
+            <rect x="425" y="262" width="425" height="180" rx="6" fill="#FAFAFB" stroke="#EDEEF2"/><text x="637.5" y="357" text-anchor="middle" fill="#8A909D" font-size="13">선택된 포지션이 없습니다.</text>
             <use href="#nr-rangeChips"/><use href="#nr-defaultDates"/>
             <rect x="759" y="647" width="91" height="36" rx="6" fill="#B9BAF5"/><text x="804.5" y="670.18" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">요청하기</text>
           </g>
@@ -5231,13 +5231,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- L4 · 드롭다운 열림 -->
         <g class="nr-step3">
           <use href="#nr-modalCommon"/><text x="506" y="201" fill="#969CA8" font-size="13">0</text>
-          <rect x="425" y="210" width="425" height="40" rx="6" fill="#FFFFFF" stroke="#D4D7DF"/><text x="441" y="235" fill="#969CA8" font-size="13.5">채용명 검색</text><circle cx="720" cy="230" r="6" fill="none" stroke="#8F95A3" stroke-width="1.4"/><path d="m724 234 5 5" stroke="#8F95A3" stroke-width="1.4" stroke-linecap="round"/><text x="757" y="234" fill="#5A6172" font-size="12">진행중</text><rect x="804" y="220" width="34" height="20" rx="10" fill="#4B4DE1"/><circle cx="828" cy="230" r="7" fill="#FFFFFF"/>
-          <g filter="url(#nr-panelShadow)"><rect x="425" y="258" width="425" height="186" rx="6" fill="#FFFFFF" stroke="#D4D7DF"/><text x="449" y="281" fill="#7F8694" font-size="11.5">연동 설정된 채용</text><text x="673" y="281" fill="#7F8694" font-size="11.5">최근 작업일</text><text x="770" y="281" fill="#7F8694" font-size="11.5">수집 범위</text><rect x="426" y="293" width="423" height="52" fill="#F5F6F8"/><rect x="442" y="313.3" width="16" height="16" rx="3" fill="#FFFFFF" stroke="#C9CCD6"/><text x="472" y="326" fill="#1F2430" font-size="13">백엔드 개발자 채용</text><use href="#nr-share" x="618" y="311.7"/><text x="640" y="326" fill="#5A6172" font-size="12.5">3</text><text x="711" y="326" fill="#8A909D" font-size="13">-</text><text x="805" y="326" fill="#8A909D" font-size="13">-</text></g>
+          <rect x="425" y="210" width="425" height="40" rx="6" fill="#FFFFFF" stroke="#D4D7DF"/><text x="441" y="235" fill="#969CA8" font-size="13.5">포지션명 검색</text><circle cx="720" cy="230" r="6" fill="none" stroke="#8F95A3" stroke-width="1.4"/><path d="m724 234 5 5" stroke="#8F95A3" stroke-width="1.4" stroke-linecap="round"/><text x="757" y="234" fill="#5A6172" font-size="12">진행중</text><rect x="804" y="220" width="34" height="20" rx="10" fill="#4B4DE1"/><circle cx="828" cy="230" r="7" fill="#FFFFFF"/>
+          <g filter="url(#nr-panelShadow)"><rect x="425" y="258" width="425" height="186" rx="6" fill="#FFFFFF" stroke="#D4D7DF"/><text x="449" y="281" fill="#7F8694" font-size="11.5">연동 설정된 포지션</text><text x="673" y="281" fill="#7F8694" font-size="11.5">최근 작업일</text><text x="770" y="281" fill="#7F8694" font-size="11.5">수집 범위</text><rect x="426" y="293" width="423" height="52" fill="#F5F6F8"/><rect x="442" y="313.3" width="16" height="16" rx="3" fill="#FFFFFF" stroke="#C9CCD6"/><text x="472" y="326" fill="#1F2430" font-size="13">백엔드 개발자 채용</text><use href="#nr-share" x="618" y="311.7"/><text x="640" y="326" fill="#5A6172" font-size="12.5">3</text><text x="711" y="326" fill="#8A909D" font-size="13">-</text><text x="805" y="326" fill="#8A909D" font-size="13">-</text></g>
           <use href="#nr-rangeChips"/><use href="#nr-defaultDates"/>
           <rect x="759" y="647" width="91" height="36" rx="6" fill="#B9BAF5"/><text x="804.5" y="670.18" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">요청하기</text>
         </g>
 
-        <!-- L5 · 채용 선택 완료 -->
+        <!-- L5 · 포지션 선택 완료 -->
         <g class="nr-step4">
           <use href="#nr-modalCommon"/><text x="506" y="201" fill="#969CA8" font-size="13">1</text><use href="#nr-closedDropdown"/>
           <rect x="425" y="262" width="425" height="180" rx="6" fill="#FAFAFB" stroke="#EDEEF2"/><rect x="437" y="283" width="401" height="50" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/><circle cx="454" cy="308" r="7" fill="#4B4DE1"/><circle cx="454" cy="308" r="2.5" fill="#FFFFFF"/><text x="470" y="313" fill="#1F2430" font-size="13">백엔드 개발자 채용</text><use href="#nr-share" x="620" y="298.4"/><text x="642" y="313" fill="#5A6172" font-size="12.5">3</text><text x="710" y="313" fill="#8A909D" font-size="13">-</text><text x="770" y="313" fill="#8A909D" font-size="13">-</text><path d="m814 302 12 12m0-12-12 12" stroke="#9298A5" stroke-width="1.4" stroke-linecap="round"/>
@@ -5329,10 +5329,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main class="ne-shell">
     <header class="ne-header">
       <h1 class="ne-title">커넥트 지원자 등록</h1>
-      <p class="ne-subtitle">수집한 지원자를 확인하고 나인하이어 채용에 등록합니다</p>
+      <p class="ne-subtitle">수집한 지원자를 확인하고 나인하이어 포지션에 등록합니다</p>
     </header>
     <div class="ne-svg-wrap">
-      <svg viewBox="0 0 1275 750" width="100%" role="img" aria-label="커넥트에서 수집한 지원자 10명을 확인하고 개인정보 동의와 주의사항을 거쳐 나인하이어 채용에 등록하는 안내 애니메이션">
+      <svg viewBox="0 0 1275 750" width="100%" role="img" aria-label="커넥트에서 수집한 지원자 10명을 확인하고 개인정보 동의와 주의사항을 거쳐 나인하이어 포지션에 등록하는 안내 애니메이션">
         <defs>
           <linearGradient id="ne-logoGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6750FF"/><stop offset="1" stop-color="#482EF8"/></linearGradient>
           <symbol id="ne-logo" viewBox="0 0 832 832"><rect width="832" height="832" rx="190" fill="url(#ne-logoGrad)"/><path d="M324 183 H451 V326 L546 183 H672 V393 L509 641 H381 V501 L286 641 H160 V435 Z" fill="#FFFFFF"/></symbol>
@@ -5371,7 +5371,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <g transform="translate(910 59) scale(.75)" fill="#8A909D"><path fill-rule="evenodd" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.48.48 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6a3.6 3.6 0 1 1 0-7.2 3.6 3.6 0 0 1 0 7.2z"/></g><path d="M938 53v30" stroke="#E7E8EF"/>
             <rect x="947" y="51" width="282" height="34" rx="8" fill="#4B4DE1"/><text x="1088" y="73.2" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="750">선택된 10명의 지원자 등록하기</text><path d="m1245 62 11 11m0-11-11 11" stroke="#8A909D" stroke-width="1.5" stroke-linecap="round"/>
             <rect y="96" width="1275" height="654" fill="#EFF1F5"/><rect x="0" y="96" width="300" height="654" fill="#F4F5F9"/><rect x="300" y="96" width="470" height="654" fill="#FFFFFF"/><rect x="770" y="96" width="505" height="654" fill="#FFFFFF"/><path d="M300 96v654M770 96v654" stroke="#E7E8EF"/>
-            <text x="20" y="128" fill="#1F2430" font-size="15" font-weight="750">요청한 채용</text>
+            <text x="20" y="128" fill="#1F2430" font-size="15" font-weight="750">요청한 포지션</text>
             <rect x="18" y="144" width="264" height="76" rx="12" fill="#F1F2FF" stroke="#C6C8F5" stroke-width="1.5"/><text x="34" y="172" fill="#1F2430" font-size="14" font-weight="750">백엔드 개발자 채용</text><text x="34" y="198" fill="#5A6172" font-size="12.5">10명의 지원자 · </text><text x="139" y="198" fill="#4B4DE1" font-size="12.5" text-decoration="underline">3개의 공고</text>
             <rect x="18" y="232" width="264" height="76" rx="12" fill="#FFFFFF" stroke="#E7E8EF"/><text x="34" y="260" fill="#5A6172" font-size="14" font-weight="700">프론트엔드 개발자 채용</text><text x="34" y="286" fill="#8A909D" font-size="12.5">8명의 지원자 · 1개의 공고</text>
             <rect x="18" y="320" width="264" height="76" rx="12" fill="#FFFFFF" stroke="#E7E8EF"/><text x="34" y="348" fill="#5A6172" font-size="14" font-weight="700">데이터 분석가 채용</text><text x="34" y="374" fill="#8A909D" font-size="12.5">15명의 지원자 · 2개의 공고</text>
@@ -5441,7 +5441,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <rect x="16" y="112" width="24" height="24" rx="7" fill="#E3E5EC"/><rect x="16" y="160" width="24" height="24" rx="7" fill="#CFD2DC"/><rect x="16" y="214" width="24" height="24" rx="7" fill="#E3E5EC"/><rect x="16" y="266" width="24" height="24" rx="7" fill="#E3E5EC"/><rect x="16" y="318" width="24" height="24" rx="7" fill="#E3E5EC"/>
           <rect x="56" y="86" width="194" height="664" fill="#FAFAFB"/>
           <rect x="76" y="110" width="96" height="10" rx="5" fill="#E1E3EA"/>
-          <rect x="66" y="136" width="174" height="36" rx="7" fill="#FFFFFF"/><text x="80" y="159" fill="#1F2430" font-size="13" font-weight="700">전체 채용</text><rect x="214" y="151" width="14" height="14" rx="4" fill="#E1E3EA"/>
+          <rect x="66" y="136" width="174" height="36" rx="7" fill="#FFFFFF"/><text x="80" y="159" fill="#1F2430" font-size="13" font-weight="700">전체 포지션</text><rect x="214" y="151" width="14" height="14" rx="4" fill="#E1E3EA"/>
           <rect x="80" y="191" width="96" height="9" rx="4" fill="#E1E3EA"/><rect x="80" y="227" width="104" height="9" rx="4" fill="#E1E3EA"/><rect x="80" y="263" width="72" height="9" rx="4" fill="#E1E3EA"/><rect x="80" y="299" width="122" height="9" rx="4" fill="#E1E3EA"/><rect x="80" y="335" width="108" height="9" rx="4" fill="#E1E3EA"/>
           <path d="M70 361h166" stroke="#E5E7EC"/>
           <rect x="76" y="385" width="108" height="9" rx="4" fill="#E1E3EA"/>
@@ -5602,7 +5602,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           designWidth: 1120,
           fallbackHeight: 660,
           routeNumber: '3',
-          route: '설정 → 플랫폼 공고 연결 → [연결 생성하기] → 나인하이어 채용 선택 → 플랫폼 계정별 공고 선택 → [공고 연결하기]',
+          route: '설정 → 플랫폼 공고 연결 → [연결 생성하기] → 나인하이어 포지션 선택 → 플랫폼 계정별 공고 선택 → [공고 연결하기]',
           title: '플랫폼 공고 연결 애니메이션'
         },
         collect: {
@@ -5611,7 +5611,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           designWidth: 1160,
           fallbackHeight: 683,
           routeNumber: '4',
-          route: '설정 → 플랫폼 공고 연결 → 지원자 데이터 수집 → [작업 요청] → 채용·수집 범위 선택 → [작업 요청]',
+          route: '설정 → 플랫폼 공고 연결 → 지원자 데이터 수집 → [작업 요청] → 포지션·수집 범위 선택 → [작업 요청]',
           title: '지원자 수집 애니메이션'
         },
         register: {
@@ -5734,20 +5734,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         job: {
           panel: 1,
           eyebrow: 'STEP 3',
-          title: '<span class="title-line">나인하이어 채용과 플랫폼 공고를 연결해요</span>',
-          lead: '나인하이어 채용을 선택한 다음 계정별 플랫폼 공고를 연결해요.'
+          title: '<span class="title-line">나인하이어 포지션과 플랫폼 공고를 연결해요</span>',
+          lead: '나인하이어 포지션을 선택한 다음 계정별 플랫폼 공고를 연결해요.'
         },
         collect: {
           panel: 2,
           eyebrow: 'STEP 4',
           title: '<span class="title-line">각 플랫폼의 지원자 정보를 수집해요</span>',
-          lead: '나인하이어 채용과 연결해 둔 플랫폼의 공고들에 접수된 지원자 정보를 수집해요. 보통 매일 혹은 주기적으로 수집합니다.'
+          lead: '나인하이어 포지션과 연결해 둔 플랫폼의 공고들에 접수된 지원자 정보를 수집해요. 보통 매일 혹은 주기적으로 수집합니다.'
         },
         register: {
           panel: 2,
           eyebrow: 'STEP 5',
           title: '<span class="title-line">지원자를 확인하고 등록해요</span>',
-          lead: '수집된 지원자를 검토한 뒤 나인하이어 채용에 등록하고, 나인하이어에서 확인하세요.'
+          lead: '수집된 지원자를 검토한 뒤 나인하이어 포지션에 등록하고, 나인하이어에서 확인하세요.'
         }
       };
       var processNextLabels = {
